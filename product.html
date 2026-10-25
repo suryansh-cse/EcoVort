@@ -7,59 +7,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/ecovort-logo.svg">
     <link rel="stylesheet" href="css/product.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .left-nav .search-bar {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            width: min(100%, 380px);
-            padding: 6px;
-            background: #f1f8e9;
-            border: 1px solid #c5d9b8;
-            border-radius: 999px;
-        }
 
-        .left-nav .search-bar input {
-            flex: 1;
-            min-width: 0;
-            padding: 10px 14px;
-            color: #263b2b;
-            background: transparent;
-            border: 0;
-            outline: 0;
-        }
-
-        .left-nav .search-bar input::placeholder {
-            color: #708270;
-        }
-
-        .left-nav .search-bar input:focus-visible {
-            outline: 2px solid #2e7d32;
-            outline-offset: 2px;
-            border-radius: 999px;
-        }
-
-        .left-nav .search-bar button {
-            padding: 10px 18px;
-            color: #fff;
-            font-weight: 600;
-            background: #2e7d32;
-            border: 0;
-            border-radius: 999px;
-            cursor: pointer;
-            transition: background-color 160ms ease;
-        }
-
-        .left-nav .search-bar button:hover {
-            background: #1b5e20;
-        }
-
-        @media (max-width: 480px) {
-            .left-nav .search-bar button {
-                padding-inline: 14px;
-            }
-        }
-    </style>
 </head>
 <body>
     <div class="navbar">
@@ -98,9 +46,84 @@
 
             <!-- Product Listing Section -->
              <div class="product-listing">
+                <hr>
                 <h2>Our Products</h2>
-                <div class="products-grid" id="products-grid">
-                    <!-- Product cards will be dynamically inserted here -->
+                <style>
+                    .product-carousel { display: flex; align-items: center; gap: 12px; }
+                    .product-carousel .products-grid {
+                        display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory;
+                        scroll-behavior: smooth; scrollbar-width: none; flex: 1; padding: 8px 2px;
+                    }
+                    .product-carousel .products-grid::-webkit-scrollbar { display: none; }
+                    .product-carousel .product-card { flex: 0 0 260px; scroll-snap-align: start; }
+                    .carousel-arrow { flex: 0 0 auto; cursor: pointer; padding: 10px 14px; font-size: 20px; }
+                    @media (max-width: 600px) {
+                        .product-carousel { gap: 6px; }
+                        .product-carousel .product-card { flex-basis: 80%; }
+                    }
+                </style>
+                <div class="product-carousel">
+                    <button class="carousel-arrow" type="button" aria-label="Scroll products left" onclick="scrollProducts(-1)">&lt;</button>
+                    <div class="products-grid" id="products-grid">
+                    <article class="product-card" id="product-card-bottle-1" data-product-id="bottle-1" data-product-name="Eco-Friendly Water Bottle" data-product-price="15.99">
+                        <img src="assets/ecovort-logo.svg" alt="Eco-Friendly Water Bottle" class="product-image" id="product-image-bottle-1">
+                        <h3 class="product-name" id="product-name-bottle-1">Eco-Friendly Water Bottle</h3>
+                        <p class="product-price" id="product-price-bottle-1">$15.99</p>
+                        <button type="button" class="add-to-cart-button" id="add-to-cart-bottle-1" name="add-to-cart" value="bottle-1" data-product-id="bottle-1">Add to Cart</button>
+                    </article>
+                    <article class="product-card" id="product-card-bottle-2" data-product-id="bottle-2" data-product-name="Eco-Friendly Water Bottle" data-product-price="15.99">
+                        <img src="assets/ecovort-logo.svg" alt="Eco-Friendly Water Bottle" class="product-image" id="product-image-bottle-2">
+                        <h3 class="product-name" id="product-name-bottle-2">Eco-Friendly Water Bottle</h3>
+                        <p class="product-price" id="product-price-bottle-2">$15.99</p>
+                        <button type="button" class="add-to-cart-button" id="add-to-cart-bottle-2" name="add-to-cart" value="bottle-2" data-product-id="bottle-2">Add to Cart</button>
+                    </article>
+
+                    <article class="product-card" id="product-card-bottle-3" data-product-id="bottle-3" data-product-name="Eco-Friendly Water Bottle" data-product-price="15.99">
+                        <img src="assets/ecovort-logo.svg" alt="Eco-Friendly Water Bottle" class="product-image" id="product-image-bottle-3">
+                        <h3 class="product-name" id="product-name-bottle-3">Eco-Friendly Water Bottle</h3>
+                        <p class="product-price" id="product-price-bottle-3">$15.99</p>
+                        <button type="button" class="add-to-cart-button" id="add-to-cart-bottle-3" name="add-to-cart" value="bottle-3" data-product-id="bottle-3">Add to Cart</button>
+                    </article>
+
+                    <article class="product-card" id="product-card-bottle-3" data-product-id="bottle-3" data-product-name="Eco-Friendly Water Bottle" data-product-price="15.99">
+                        <img src="assets/ecovort-logo.svg" alt="Eco-Friendly Water Bottle" class="product-image" id="product-image-bottle-3">
+                        <h3 class="product-name" id="product-name-bottle-3">Eco-Friendly Water Bottle</h3>
+                        <p class="product-price" id="product-price-bottle-3">$15.99</p>
+                        <button type="button" class="add-to-cart-button" id="add-to-cart-bottle-3" name="add-to-cart" value="bottle-3" data-product-id="bottle-3">Add to Cart</button>
+                    </article>
+
+                    <article class="product-card" id="product-card-bottle-3" data-product-id="bottle-3" data-product-name="Eco-Friendly Water Bottle" data-product-price="15.99">
+                        <img src="assets/ecovort-logo.svg" alt="Eco-Friendly Water Bottle" class="product-image" id="product-image-bottle-3">
+                        <h3 class="product-name" id="product-name-bottle-3">Eco-Friendly Water Bottle</h3>
+                        <p class="product-price" id="product-price-bottle-3">$15.99</p>
+                        <button type="button" class="add-to-cart-button" id="add-to-cart-bottle-3" name="add-to-cart" value="bottle-3" data-product-id="bottle-3">Add to Cart</button>
+                    </article>
+
+                    <article class="product-card" id="product-card-bottle-3" data-product-id="bottle-3" data-product-name="Eco-Friendly Water Bottle" data-product-price="15.99">
+                        <img src="assets/ecovort-logo.svg" alt="Eco-Friendly Water Bottle" class="product-image" id="product-image-bottle-3">
+                        <h3 class="product-name" id="product-name-bottle-3">Eco-Friendly Water Bottle</h3>
+                        <p class="product-price" id="product-price-bottle-3">$15.99</p>
+                        <button type="button" class="add-to-cart-button" id="add-to-cart-bottle-3" name="add-to-cart" value="bottle-3" data-product-id="bottle-3">Add to Cart</button>
+                    </article>
+                    
+                    <article class="product-card" id="product-card-bottle-3" data-product-id="bottle-3" data-product-name="Eco-Friendly Water Bottle" data-product-price="15.99">
+                        <img src="assets/ecovort-logo.svg" alt="Eco-Friendly Water Bottle" class="product-image" id="product-image-bottle-3">
+                        <h3 class="product-name" id="product-name-bottle-3">Eco-Friendly Water Bottle</h3>
+                        <p class="product-price" id="product-price-bottle-3">$15.99</p>
+                        <button type="button" class="add-to-cart-button" id="add-to-cart-bottle-3" name="add-to-cart" value="bottle-3" data-product-id="bottle-3">Add to Cart</button>
+                    </article>
+
+                    </div>
+                    <button class="carousel-arrow" type="button" aria-label="Scroll products right" onclick="scrollProducts(1)">&gt;</button>
+                </div>
+                <script>
+                    function scrollProducts(direction) {
+                        const products = document.getElementById('products-grid');
+                        products.scrollBy({ left: direction * products.clientWidth * 0.8, behavior: 'smooth' });
+                    }
+                </script>
+
+
              </div>
     
 </body>
