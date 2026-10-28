@@ -4,21 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | EcoZora</title>
+    <title>About Us</title>
     <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" type="image/svg+xml" href="assets/ecovort-logo.svg">
 </head>
 <body>
+    <!-- Site header and main navigation -->
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="brand" href="#home" aria-label="EcoVort home">
+                <span class="brand-leaf" aria-hidden="true">❧</span>
+                <span>EcoVort</span>
+            </a>
 
     <!-- Navigation Bar -->
     <header class="navbar">
         <a href="index.html" class="logo">
-            <span class="leaf">✿</span> EcoZora
+            <span class
         </a>
 
         <nav>
             <a href="index.html">Home</a>
             <a href="index.html#shop">Shop</a>
-            <a href="index.html#categories">Categories</a>
             <a href="about.html" class="active">About Us</a>
             <a href="index.html#contact">Contact</a>
         </nav>
@@ -151,222 +161,4 @@
         </p>
     </footer>
 
-    <title>About EcoVort</title>
-    <style>
-        :root {
-            --bg: #edf5ee;
-            --panel: #ffffff;
-            --primary: #2d6a4f;
-            --primary-dark: #1c4435;
-            --accent: #8fcd9f;
-            --text: #1d2b23;
-            --muted: #53675b;
-            --border: rgba(38, 74, 60, 0.12);
-            --shadow: 0 18px 40px rgba(28, 68, 53, 0.08);
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(180deg, #edf5ee 0%, #f7faf7 100%);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-            color: #ffffff;
-            padding: 5rem 1.25rem 4rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        header::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at top, rgba(255,255,255,0.18), transparent 50%);
-        }
-
-        header h1 {
-            position: relative;
-            z-index: 1;
-            margin: 0;
-            font-size: clamp(2.4rem, 5vw, 4rem);
-            letter-spacing: -0.05em;
-        }
-
-        main {
-            max-width: 1100px;
-            margin: -2rem auto 0;
-            padding: 0 1.25rem 4rem;
-        }
-
-        section {
-            background: rgba(255, 255, 255, 0.92);
-            border: 1px solid var(--border);
-            border-radius: 22px;
-            box-shadow: var(--shadow);
-            padding: clamp(1.5rem, 3vw, 2.5rem);
-            margin-bottom: 1.5rem;
-        }
-
-        section h2 {
-            margin-top: 0;
-            margin-bottom: 0.8rem;
-            color: var(--primary-dark);
-            font-size: clamp(1.5rem, 2vw, 2.1rem);
-            letter-spacing: -0.03em;
-        }
-
-        section p,
-        section li {
-            color: var(--muted);
-            font-size: 1.04rem;
-        }
-
-        ul {
-            margin: 0.75rem 0 0;
-            padding-left: 1.2rem;
-        }
-
-        li + li {
-            margin-top: 0.75rem;
-        }
-
-        .site-footer {
-            background: linear-gradient(180deg, #f2f8f3 0%, #e5efe6 100%);
-            border-top: 1px solid rgba(28, 68, 53, 0.1);
-            color: var(--text);
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 2rem 1.25rem;
-        }
-
-        .footer-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-brand {
-            display: flex;
-            flex-direction: column;
-            gap: 0.4rem;
-        }
-
-        .brand {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.55rem;
-            text-decoration: none;
-            color: var(--primary-dark);
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
-        .brand-leaf {
-            color: var(--primary);
-            font-size: 1.5rem;
-        }
-
-        .footer-brand p {
-            margin: 0;
-            color: var(--muted);
-        }
-
-        .footer-nav {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-nav a {
-            color: var(--primary-dark);
-            text-decoration: none;
-            font-weight: 600;
-            transition: opacity 0.2s ease;
-        }
-
-        .footer-nav a:hover {
-            opacity: 0.8;
-            text-decoration: underline;
-        }
-
-        .copyright {
-            margin: 0;
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
-
-        @media (max-width: 640px) {
-            .footer-content {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .footer-nav {
-                width: 100%;
-                justify-content: flex-start;
-            }
-        }
-    </style>
-</head>
-<body id="home">
-    <header>
-        <h1>About EcoVort</h1>
-    </header>
-    <main id="about">
-        <section id="story">
-            <h2>Our Story</h2>
-            <p>Welcome to EcoVort! We are a team of passionate individuals dedicated to creating sustainable solutions for everyday life. Our journey began with a simple idea: to make eco-friendly products accessible and affordable for everyone.</p>
-        </section>
-        <section id="mission">
-            <h2>Our Mission</h2>
-            <p>At EcoVort, we believe that small changes can lead to significant impact. Our mission is to empower consumers to make environmentally conscious choices without compromising on quality or style.</p>
-        </section>
-        <section id="values">
-            <h2>Our Values</h2>
-            <ul>
-                <li>Sustainability: We prioritize eco-friendly materials and processes.</li>
-                <li>Innovation: We continuously seek new ways to reduce waste and improve our products.</li>
-                <li>Community: We engage with our customers and partners to promote a greener lifestyle.</li>
-            </ul>
-        </section>
-        <section id="team">
-            <h2>Meet the Team</h2>
-            <p>Our team is made up of dedicated professionals who are passionate about sustainability and innovation. From product designers to customer service representatives, each member plays a crucial role in bringing our vision to life.</p>
-        </section>
-    </main>
-    <footer class="site-footer" id="contact">
-        <div class="container footer-content">
-            <div class="footer-brand">
-                <a class="brand" href="#home"><span class="brand-leaf" aria-hidden="true">❧</span><span>EcoVort</span></a>
-                <p>Little swaps. Lighter living.</p>
-            </div>
-            <nav class="footer-nav" aria-label="Footer navigation">
-                <a href="#home">Home</a>
-                <a href="#products">Products</a>
-                <a href="#about">About Us</a>
-                <a href="mailto:hello@ecovort.example">Contact</a>
-            </nav>
-            <p class="copyright">© 2026 EcoVort. Made with care for our planet.</p>
-        </div>
-    </footer>
-</body>
-</html>
+    
