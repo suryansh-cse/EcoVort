@@ -22,50 +22,58 @@ a {
     color: inherit;
 }
 
-/* Navigation Bar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 7%;
-    background-color: #F7F5EC;
-    border-bottom: 1px solid #DCE8D5;
-    gap: 25px;
+.site-header {
+    position: relative;
+    z-index: 1;
+    background: var(--background);
 }
 
-.logo {
-    color: #356A45;
-    font-size: 26px;
-    font-weight: bold;
-    white-space: nowrap;
-}
 
-.leaf {
-    font-size: 25px;
-}
-
-.navbar nav {
+.main-nav,
+.footer-nav {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 34px;
 }
 
-.navbar nav a {
-    font-size: 14px;
-    transition: color 0.3s;
+.main-nav a,
+.footer-nav a {
+    color: var(--text);
+    font-size: 0.88rem;
+    transition: color 160ms ease;
 }
 
-.navbar nav a:hover,
-.navbar nav a.active {
-    color: #356A45;
-    font-weight: bold;
+.main-nav a:hover,
+.footer-nav a:hover {
+    color: var(--dark-green);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--dark-green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.65rem;
+    font-weight: 700;
+    letter-spacing: -1px;
 }
 
 .cart-link {
-    color: #356A45;
-    font-weight: bold;
-    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--dark-green);
+    font-size: 0.9rem;
+    font-weight: 600;
 }
+
+.cart-link span:first-child {
+    font-size: 1.45rem;
+    line-height: 1;
+}
+
+
 
 /* Shared Styles */
 .eyebrow {
@@ -326,3 +334,5 @@ h2 {
         font-size: 65px;
     }
 }
+
+
