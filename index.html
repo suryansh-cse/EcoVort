@@ -3,178 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Thoughtful everyday essentials for a greener, lower-waste life. Shop sustainable favorites at EcoVort.">
-    <title>EcoVort | Sustainable Everyday Essentials</title>
+    <meta name="description" content="Browse reusable everyday essentials for carrying, cleaning, bathing, and the kitchen.">
+    <meta name="theme-color" content="#f3f0e5">
+    <title>EcoVort | Everyday Reusables</title>
     <link rel="stylesheet" href="css/style.css">
-     <link rel="icon" type="image/svg+xml" href="assets/ecovort-logo.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/ecovort-logo.svg">
 </head>
 <body>
-    <!-- Site header and main navigation -->
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
         <div class="container header-content">
             <a class="brand" href="#home" aria-label="EcoVort home">
-                <span class="brand-leaf" aria-hidden="true">❧</span>
+                <img class="brand-mark" src="assets/ecovort-logo.svg" alt="">
                 <span>EcoVort</span>
             </a>
-
             <nav class="main-nav" aria-label="Main navigation">
-                <a href="#home">Home</a>
+                <a href="#home" aria-current="page">Home</a>
                 <a href="product.html">Products</a>
-                <a href="about.html">About Us</a>
-                <a href="#contact">Contact</a>
+                <a href="about.html">About</a>
             </nav>
-
-            <a class="cart-link" href="products.html" aria-label="Shopping cart">
-                <span aria-hidden="true">▱</span>
-                <span>Cart</span>
-            </a>
+            <a class="shop-link" href="product.html#products">Browse shop <span aria-hidden="true">↗</span></a>
         </div>
     </header>
 
-    <main>
-        <!-- Welcome banner -->
+    <main id="main-content">
         <section class="hero" id="home">
             <div class="container hero-content">
                 <div class="hero-copy">
-                    <p class="eyebrow">A little better, every day</p>
-                    <h1>Make Room for a <span>Greener Life.</span></h1>
+                    <p class="eyebrow">Carry · clean · reuse</p>
+                    <h1>Everyday things, for a <span>lighter routine.</span></h1>
                     <p class="hero-description">
-                        Thoughtful everyday essentials that are kinder to the planet.
-                        Small swaps, less waste, and a brighter tomorrow start at home.
+                        A considered catalogue of reusable essentials for carrying,
+                        cleaning, bathing, and eating at home or on the go.
                     </p>
-                    <a class="button button-primary" href="#products">Explore Products <span aria-hidden="true">→</span></a>
+                    <a class="button" href="product.html#products">Browse the catalogue <span aria-hidden="true">→</span></a>
                     <div class="hero-note">
-                        <span class="note-icon" aria-hidden="true">✳</span>
-                        <span>Good for you. Gentler on Earth.</span>
+                        <span class="note-icon" aria-hidden="true">↻</span>
+                        <span>Start with the things you reach for every day.</span>
                     </div>
                 </div>
-                <div class="hero-image-wrap">
+                <figure class="hero-image-wrap">
                     <img
                         class="hero-image"
-                        src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1100&q=85"
-                        alt="Green plants growing in a sunlit garden"
+                        src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"
+                        alt="A seedling growing in potting soil beside a hand trowel"
+                        fetchpriority="high"
                     >
-                    <div class="image-caption">
-                        <span class="caption-mark" aria-hidden="true">✿</span>
-                        <span>Live simply, naturally.</span>
-                    </div>
-                </div>
+                    <figcaption class="image-caption">
+                        <span class="caption-mark" aria-hidden="true">—</span>
+                        <span>Good habits take root at home.</span>
+                    </figcaption>
+                </figure>
             </div>
         </section>
 
-        <!-- Featured sustainable essentials -->
         <section class="products-section section-padding" id="products">
             <div class="container">
                 <div class="section-heading">
                     <div>
-                        <p class="eyebrow">Thoughtful essentials</p>
-                        <h2>Everyday, made better.</h2>
+                        <p class="eyebrow">A few useful starting points</p>
+                        <h2>For the everyday.</h2>
                     </div>
-                    <p>Simple swaps for a lighter footprint and a happier home.</p>
+                    <p>Four simple categories. Browse by the routines you already have.</p>
                 </div>
 
                 <div class="product-grid">
                     <article class="product-card">
                         <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&w=750&q=80" alt="Natural cotton reusable shopping tote" loading="lazy">
-                            <span class="product-label">Bestseller</span>
+                            <img src="assets/category-carry.svg" alt="Illustration of a canvas tote bag" loading="lazy">
                         </div>
+                        <span class="product-label">Carry</span>
                         <div class="product-info">
                             <div class="product-title-row">
                                 <h3>Everyday Tote</h3>
                                 <span class="price">$18</span>
                             </div>
-                            <p>A sturdy, reusable sidekick for your market runs.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
+                            <p>A sturdy bag for market runs and daily errands.</p>
+                            <a class="product-link" href="product.html#bags-heading">Explore bags <span aria-hidden="true">→</span></a>
                         </div>
                     </article>
-
                     <article class="product-card">
                         <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=750&q=80" alt="Bamboo toothbrush with natural bristles" loading="lazy">
-                            <span class="product-label">Plastic-free</span>
+                            <img src="assets/category-care.svg" alt="Illustration of everyday bath and body items" loading="lazy">
                         </div>
+                        <span class="product-label">Care</span>
                         <div class="product-info">
                             <div class="product-title-row">
                                 <h3>Bamboo Toothbrush</h3>
                                 <span class="price">$6</span>
                             </div>
-                            <p>A fresh start for your smile and the planet.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
+                            <p>A familiar part of the morning routine, with a different handle.</p>
+                            <a class="product-link" href="product.html#care-heading">Explore bath &amp; body <span aria-hidden="true">→</span></a>
                         </div>
                     </article>
-
                     <article class="product-card">
                         <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=750&q=80" alt="Reusable refillable bottle for everyday cleaning" loading="lazy">
-                            <span class="product-label">Refill & reuse</span>
+                            <img src="assets/category-cleaning.svg" alt="Illustration of a refill bottle and cleaning brush" loading="lazy">
                         </div>
+                        <span class="product-label">Clean</span>
                         <div class="product-info">
                             <div class="product-title-row">
                                 <h3>Refill Bottle</h3>
                                 <span class="price">$14</span>
                             </div>
-                            <p>Refill your cleaning routine, not your trash can.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
+                            <p>Keep a bottle on hand for refills around the house.</p>
+                            <a class="product-link" href="product.html#cleaning-heading">Explore cleaning <span aria-hidden="true">→</span></a>
                         </div>
                     </article>
-
                     <article class="product-card">
                         <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
+                            <img src="assets/category-kitchen.svg" alt="Illustration of a reusable food container" loading="lazy">
                         </div>
+                        <span class="product-label">Eat</span>
                         <div class="product-info">
                             <div class="product-title-row">
                                 <h3>Lunch Keeper</h3>
                                 <span class="price">$22</span>
                             </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
+                            <p>A reusable container for packed lunches and leftovers.</p>
+                            <a class="product-link" href="product.html#kitchen-heading">Explore kitchen <span aria-hidden="true">→</span></a>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- Our approach to sustainable living -->
         <section class="about-section section-padding" id="about">
             <div class="container about-content">
-                <div class="about-art" aria-hidden="true">
-                    <span class="about-sun"></span>
-                    <span class="about-leaf about-leaf-one"></span>
-                    <span class="about-leaf about-leaf-two"></span>
-                    <span class="about-stem"></span>
-                    <span class="about-pot"></span>
-                </div>
                 <div class="about-copy">
-                    <p class="eyebrow">A more mindful way</p>
-                    <h2>Small Changes,<br>Big Impact</h2>
+                    <p class="eyebrow">A practical place to begin</p>
+                    <h2>Use what you have. Replace one thing at a time.</h2>
                     <p>
-                        Sustainable living doesn't have to be complicated. We bring
-                        together useful, thoughtfully made alternatives that help
-                        reduce plastic waste—one everyday choice at a time.
+                        EcoVort brings everyday alternatives into one place.
+                        Find a reusable bag for errands, a refill bottle for
+                        cleaning, or a container for lunch.
                     </p>
-                    <a class="text-link" href="#products">Find your first swap <span aria-hidden="true">→</span></a>
+                    <a class="text-link" href="about.html">What EcoVort is about <span aria-hidden="true">→</span></a>
+                </div>
+                <div class="practice-list" aria-label="Browse by routine">
+                    <div class="practice-row">
+                        <span class="practice-number">01</span>
+                        <strong>Carry</strong>
+                        <span>Totes and bags for days out.</span>
+                    </div>
+                    <div class="practice-row">
+                        <span class="practice-number">02</span>
+                        <strong>Care &amp; clean</strong>
+                        <span>Bathroom basics, brushes, and refills.</span>
+                    </div>
+                    <div class="practice-row">
+                        <span class="practice-number">03</span>
+                        <strong>Eat</strong>
+                        <span>Containers and cups for the kitchen.</span>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer and secondary navigation -->
-    <footer class="site-footer" id="contact">
+    <footer class="site-footer">
         <div class="container footer-content">
             <div class="footer-brand">
-                <a class="brand" href="#home"><span class="brand-leaf" aria-hidden="true">❧</span><span>EcoVort</span></a>
-                <p>Little swaps. Lighter living.</p>
+                <a class="brand" href="#home">
+                    <img class="brand-mark" src="assets/ecovort-logo.svg" alt="">
+                    <span>EcoVort</span>
+                </a>
+                <p>Everyday reusables, gathered in one place.</p>
             </div>
             <nav class="footer-nav" aria-label="Footer navigation">
                 <a href="#home">Home</a>
-                <a href="#products">Products</a>
-                <a href="#about">About Us</a>
-                <a href="mailto:hello@ecovort.example">Contact</a>
+                <a href="product.html">Products</a>
+                <a href="about.html">About</a>
             </nav>
-            <p class="copyright">© 2026 EcoVort. Made with care for our planet.</p>
+            <p class="copyright">© 2026 EcoVort. Browse at your own pace.</p>
         </div>
     </footer>
 </body>

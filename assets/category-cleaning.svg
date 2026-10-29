@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620">
+  <rect width="900" height="620" fill="#dfe7df"/>
+  <path d="M372 213v-45h106v45l36 48v209H336V261z" fill="#f3f0e5" stroke="#284b3d" stroke-linejoin="round" stroke-width="9"/>
+  <path d="M396 168v-51h56v51M452 117h100v25H452" fill="none" stroke="#284b3d" stroke-linecap="round" stroke-linejoin="round" stroke-width="11"/>
+  <path d="M343 319h163v76H343z" fill="#c6a77a"/>
+  <path d="M370 341h109M370 368h75" stroke="#284b3d" stroke-width="6"/>
+  <path d="M599 397l101-118M686 269l23 20M574 414l38 32 20-21-38-32z" fill="none" stroke="#b75f48" stroke-linecap="round" stroke-linejoin="round" stroke-width="11"/>
+  <path d="M54 548h792" stroke="#284b3d" opacity=".16" stroke-width="2"/>
+  <text x="54" y="82" fill="#284b3d" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="5">HOME / REFILL &amp; CLEAN</text>
+</svg>

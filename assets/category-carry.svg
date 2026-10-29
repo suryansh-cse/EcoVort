@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620">
+  <rect width="900" height="620" fill="#e5e9dd"/>
+  <path d="M284 239h332l-27 279H311z" fill="#c6a77a"/>
+  <path d="M359 250v-61c0-59 35-96 91-96s91 37 91 96v61" fill="none" stroke="#284b3d" stroke-linecap="round" stroke-width="24"/>
+  <path d="M314 302h272M305 350h281M300 398h277" fill="none" opacity=".34" stroke="#f3f0e5" stroke-width="8"/>
+  <path d="M393 336h110" stroke="#b75f48" stroke-width="10"/>
+  <path d="M0 548h900" stroke="#284b3d" opacity=".15" stroke-width="2"/>
+  <text x="54" y="82" fill="#284b3d" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="5">CARRY / EVERYDAY</text>
+</svg>

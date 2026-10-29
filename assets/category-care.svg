@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620">
+  <rect width="900" height="620" fill="#efe4d4"/>
+  <path d="M380 132h95v77h-95z" fill="#b75f48"/>
+  <path d="M393 208h69l-18 280c-2 27-43 27-45 0z" fill="#c6a77a" stroke="#284b3d" stroke-width="8"/>
+  <path d="M402 265h51M399 298h49M397 331h47" stroke="#f3f0e5" stroke-width="5"/>
+  <path d="M584 352h155l-16 120H600z" fill="#f3f0e5" stroke="#284b3d" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M570 338h181v23H570z" fill="#284b3d"/>
+  <path d="M54 548h792" stroke="#284b3d" opacity=".16" stroke-width="2"/>
+  <text x="54" y="82" fill="#284b3d" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="5">BATH / DAILY CARE</text>
+</svg>

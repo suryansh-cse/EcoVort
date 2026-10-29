@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620">
+  <rect width="900" height="620" fill="#eadfcf"/>
+  <path d="M218 297h466l-26 193H244z" fill="#f3f0e5" stroke="#284b3d" stroke-linejoin="round" stroke-width="9"/>
+  <path d="M201 271h500v42H201z" fill="#284b3d"/>
+  <path d="M343 271v-27c0-23 18-41 41-41h132c23 0 41 18 41 41v27" fill="none" stroke="#284b3d" stroke-width="13"/>
+  <path d="M270 349h362M278 385h345M285 421h331" stroke="#c6a77a" stroke-width="7"/>
+  <path d="M54 548h792" stroke="#284b3d" opacity=".16" stroke-width="2"/>
+  <text x="54" y="82" fill="#284b3d" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="5">KITCHEN / PACK &amp; STORE</text>
+</svg>

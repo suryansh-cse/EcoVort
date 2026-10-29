@@ -3,42 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shop thoughtful, reusable essentials for a greener everyday life at EcoVort.">
-    <title>EcoVort | Shop</title>
+    <meta name="description" content="Browse reusable everyday essentials for carrying, bath and body, cleaning, and the kitchen.">
+    <meta name="theme-color" content="#f3f0e5">
+    <title>Products | EcoVort</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/product.css">
     <link rel="icon" type="image/svg+xml" href="assets/ecovort-logo.svg">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
         <div class="container header-content">
             <a class="brand" href="index.html#home" aria-label="EcoVort home">
-                <span class="brand-leaf" aria-hidden="true">❧</span>
+                <img class="brand-mark" src="assets/ecovort-logo.svg" alt="">
                 <span>EcoVort</span>
             </a>
 
             <nav class="main-nav" aria-label="Main navigation">
                 <a href="index.html#home">Home</a>
                 <a href="product.html#products" aria-current="page">Products</a>
-                <a href="about.html">About Us</a>
-                <a href="index.html#contact">Contact</a>
+                <a href="about.html">About</a>
             </nav>
-
-            <a class="cart-link" href="#products" aria-label="Shopping cart">
-                <span aria-hidden="true">▱</span>
-                <span>Cart</span>
-            </a>
+            <a class="shop-link" href="#products">Browse shop <span aria-hidden="true">↗</span></a>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="shop-section" id="products">
             <div class="container">
                 <div class="shop-heading">
                     <div>
-                        <p class="eyebrow">Thoughtful essentials</p>
-                        <h1>Our Products</h1>
+                        <p class="eyebrow">The EcoVort catalogue</p>
+                        <h1>Everyday reusables.</h1>
                     </div>
+                    <p class="shop-intro">Browse by routine, or search for something specific. Prices are listed for reference.</p>
                     <form class="shop-search" id="product-search" role="search" action="product.html" method="get">
                         <label class="visually-hidden" for="product-query">Search products</label>
                         <input id="product-query" name="q" type="search" placeholder="Search products...">
@@ -60,43 +58,39 @@
                     <div class="product-rail" role="region" aria-label="Bags and on the go products">
                         <article class="product-card" data-category="bags">
                             <div class="product-image-wrap">
-                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                                <img src="assets/category-carry.svg" alt="" loading="lazy">
                                 <span class="product-label">Bestseller</span>
                             </div>
                             <div class="product-info">
                                 <div class="product-title-row"><h3>Everyday Tote</h3><span class="price">$18</span></div>
                                 <p>A sturdy cotton tote for market runs.</p>
-                                <button class="button button-outline" type="button">Add to Cart</button>
                             </div>
                         </article>
                         <article class="product-card" data-category="bags">
                             <div class="product-image-wrap">
-                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                                <img src="assets/category-carry.svg" alt="" loading="lazy">
                             </div>
                             <div class="product-info">
                                 <div class="product-title-row"><h3>Canvas Carryall</h3><span class="price">$24</span></div>
                                 <p>A roomier bag for days out.</p>
-                                <button class="button button-outline" type="button">Add to Cart</button>
                             </div>
                         </article>
                         <article class="product-card" data-category="bags">
                             <div class="product-image-wrap">
-                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                                <img src="assets/category-carry.svg" alt="" loading="lazy">
                             </div>
                             <div class="product-info">
                                 <div class="product-title-row"><h3>Day Trip Pack</h3><span class="price">$32</span></div>
                                 <p>Carry your daily essentials hands-free.</p>
-                                <button class="button button-outline" type="button">Add to Cart</button>
                             </div>
                         </article>
                         <article class="product-card" data-category="bags">
                             <div class="product-image-wrap">
-                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                                <img src="assets/category-carry.svg" alt="" loading="lazy">
                             </div>
                             <div class="product-info">
                                 <div class="product-title-row"><h3>Foldaway Shopper</h3><span class="price">$12</span></div>
                                 <p>Keep a spare bag close at hand.</p>
-                                <button class="button button-outline" type="button">Add to Cart</button>
                             </div>
                         </article>
                     </div>
@@ -116,43 +110,39 @@
                     <div class="product-rail" role="region" aria-label="Bath and body products">
                         <article class="product-card" data-category="care">
                             <div class="product-image-wrap">
-                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                                <img src="assets/category-care.svg" alt="" loading="lazy">
                                 <span class="product-label">Plastic-free</span>
                             </div>
                             <div class="product-info">
                                 <div class="product-title-row"><h3>Bamboo Toothbrush</h3><span class="price">$6</span></div>
                                 <p>A simple swap for your bathroom shelf.</p>
-                                <button class="button button-outline" type="button">Add to Cart</button>
                             </div>
                         </article>
                         <article class="product-card" data-category="care">
                             <div class="product-image-wrap">
-                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                                <img src="assets/category-care.svg" alt="" loading="lazy">
                             </div>
                             <div class="product-info">
                                 <div class="product-title-row"><h3>Face &amp; Body Bar</h3><span class="price">$10</span></div>
                                 <p>A handy bar with less packaging.</p>
-                                <button class="button button-outline" type="button">Add to Cart</button>
                             </div>
                         </article>
                         <article class="product-card" data-category="care">
                             <div class="product-image-wrap">
-                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                                <img src="assets/category-care.svg" alt="" loading="lazy">
                             </div>
                             <div class="product-info">
                                 <div class="product-title-row"><h3>Refillable Soap Pump</h3><span class="price">$16</span></div>
                                 <p>Refill the bottle you already like.</p>
-                                <button class="button button-outline" type="button">Add to Cart</button>
                             </div>
                         </article>
                         <article class="product-card" data-category="care">
                             <div class="product-image-wrap">
-                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                                <img src="assets/category-care.svg" alt="" loading="lazy">
                             </div>
                             <div class="product-info">
                                 <div class="product-title-row"><h3>Washable Cotton Pads</h3><span class="price">$12</span></div>
                                 <p>Wash and reuse, day after day.</p>
-                                <button class="button button-outline" type="button">Add to Cart</button>
                             </div>
                         </article>
                     </div>
@@ -172,43 +162,39 @@
                     <div class="product-rail" role="region" aria-label="Home cleaning products">
                         <article class="product-card" data-category="cleaning">
                             <div class="product-image-wrap">
-                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                                <img src="assets/category-cleaning.svg" alt="" loading="lazy">
                                 <span class="product-label">Refill &amp; reuse</span>
                             </div>
                             <div class="product-info">
                                 <div class="product-title-row"><h3>Refill Bottle</h3><span class="price">$14</span></div>
                                 <p>Keep the bottle; refill as you go.</p>
-                                <button class="button button-outline" type="button">Add to Cart</button>
                             </div>
                         </article>
                         <article class="product-card" data-category="cleaning">
                             <div class="product-image-wrap">
-                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                                <img src="assets/category-cleaning.svg" alt="" loading="lazy">
                             </div>
                             <div class="product-info">
                                 <div class="product-title-row"><h3>Wood Dish Brush</h3><span class="price">$9</span></div>
                                 <p>A sturdy brush for dishes and sinks.</p>
-                                <button class="button button-outline" type="button">Add to Cart</button>
                             </div>
                         </article>
                         <article class="product-card" data-category="cleaning">
                             <div class="product-image-wrap">
-                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                                <img src="assets/category-cleaning.svg" alt="" loading="lazy">
                             </div>
                             <div class="product-info">
                                 <div class="product-title-row"><h3>Cleaning Tablets</h3><span class="price">$11</span></div>
                                 <p>Add water to make a fresh cleaning spray.</p>
-                                <button class="button button-outline" type="button">Add to Cart</button>
                             </div>
                         </article>
                         <article class="product-card" data-category="cleaning">
                             <div class="product-image-wrap">
-                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                                <img src="assets/category-cleaning.svg" alt="" loading="lazy">
                             </div>
                             <div class="product-info">
                                 <div class="product-title-row"><h3>Everyday Cloths</h3><span class="price">$8</span></div>
                                 <p>Reusable cloths for everyday spills.</p>
-                                <button class="button button-outline" type="button">Add to Cart</button>
                             </div>
                         </article>
                     </div>
@@ -228,43 +214,39 @@
                     <div class="product-rail" role="region" aria-label="Kitchen and dining products">
                         <article class="product-card" data-category="kitchen">
                             <div class="product-image-wrap">
-                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                                <img src="assets/category-kitchen.svg" alt="" loading="lazy">
                                 <span class="product-label">Daily favorite</span>
                             </div>
                             <div class="product-info">
                                 <div class="product-title-row"><h3>Lunch Keeper</h3><span class="price">$22</span></div>
                                 <p>A dependable box for lunch on the go.</p>
-                                <button class="button button-outline" type="button">Add to Cart</button>
                             </div>
                         </article>
                         <article class="product-card" data-category="kitchen">
                             <div class="product-image-wrap">
-                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                                <img src="assets/category-kitchen.svg" alt="" loading="lazy">
                             </div>
                             <div class="product-info">
                                 <div class="product-title-row"><h3>Meal Prep Bowl</h3><span class="price">$18</span></div>
                                 <p>One bowl for lunch at home or work.</p>
-                                <button class="button button-outline" type="button">Add to Cart</button>
                             </div>
                         </article>
                         <article class="product-card" data-category="kitchen">
                             <div class="product-image-wrap">
-                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                                <img src="assets/category-kitchen.svg" alt="" loading="lazy">
                             </div>
                             <div class="product-info">
                                 <div class="product-title-row"><h3>Travel Cup</h3><span class="price">$20</span></div>
                                 <p>Your morning drink, minus the takeaway cup.</p>
-                                <button class="button button-outline" type="button">Add to Cart</button>
                             </div>
                         </article>
                         <article class="product-card" data-category="kitchen">
                             <div class="product-image-wrap">
-                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                                <img src="assets/category-kitchen.svg" alt="" loading="lazy">
                             </div>
                             <div class="product-info">
                                 <div class="product-title-row"><h3>Pantry Jar</h3><span class="price">$12</span></div>
                                 <p>Keep dry goods tidy and close by.</p>
-                                <button class="button button-outline" type="button">Add to Cart</button>
                             </div>
                         </article>
                     </div>
@@ -278,16 +260,18 @@
     <footer class="site-footer" id="contact">
         <div class="container footer-content">
             <div class="footer-brand">
-                <a class="brand" href="index.html#home"><span class="brand-leaf" aria-hidden="true">❧</span><span>EcoVort</span></a>
-                <p>Little swaps. Lighter living.</p>
+                <a class="brand" href="index.html#home">
+                    <img class="brand-mark" src="assets/ecovort-logo.svg" alt="">
+                    <span>EcoVort</span>
+                </a>
+                <p>Everyday reusables, gathered in one place.</p>
             </div>
             <nav class="footer-nav" aria-label="Footer navigation">
                 <a href="index.html#home">Home</a>
                 <a href="#products">Products</a>
-                <a href="about.html">About Us</a>
-                <a href="index.html#contact">Contact</a>
+                <a href="about.html">About</a>
             </nav>
-            <p class="copyright">© 2026 EcoVort. Made with care for our planet.</p>
+            <p class="copyright">© 2026 EcoVort. Browse at your own pace.</p>
         </div>
     </footer>
 
