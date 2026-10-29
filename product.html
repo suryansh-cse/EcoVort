@@ -3,542 +3,357 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop thoughtful, reusable essentials for a greener everyday life at EcoVort.">
     <title>EcoVort | Shop</title>
-    <link rel="icon" type="image/svg+xml" href="assets/ecovort-logo.svg">
-    <link rel="stylesheet" href="css/product.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="icon" type="image/svg+xml" href="assets/ecovort-logo.svg">
 </head>
 <body>
-    <div class="navbar">
-           <img src="assets/ecovort-logo.svg" alt="EcoVort" class="logo" spellcheck="false"> <h2>EcoVort</h2>
-        <!-- Top Left Nav Bar -->
-            <div class="left-nav">
-                <form class="search-bar" role="search" action="product.html" method="get">
-                    <input type="search" name="q" placeholder="Search products..." aria-label="Search products">
-                    <button type="submit" class="button">Search</button>
-                </form>
-            </div>
-        <!-- Top Right Nav Bar -->
-            <div class="right-nav">
-              <a href="index.html">Home</a>
-              <br>
-              <br>
-              <a href="about.html">About Us</a>
-              <br>
-              <br>
-                            <a href="cart.html" aria-label="Cart">
-                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="9" cy="21" r="1"></circle>
-                                        <circle cx="20" cy="21" r="1"></circle>
-                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                                </svg>
-                              
-                            </a>
-            </div>
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="brand" href="index.html#home" aria-label="EcoVort home">
+                <span class="brand-leaf" aria-hidden="true">❧</span>
+                <span>EcoVort</span>
+            </a>
 
-            </div>
-              <div class="bottom-nav">
-                <a href=""></a>
-                
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html#home">Home</a>
+                <a href="product.html#products" aria-current="page">Products</a>
+                <a href="about.html">About Us</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
 
-            </div>
+            <a class="cart-link" href="#products" aria-label="Shopping cart">
+                <span aria-hidden="true">▱</span>
+                <span>Cart</span>
+            </a>
+        </div>
+    </header>
 
-            <!-- Product Listing Section -->
-             <div class="product-listing">
-                <hr>
-                <h2>Our Products</h2>
-                <style>
-                    .product-carousel { display: flex; align-items: center; gap: 12px; }
-                    .product-carousel .products-grid {
-                        display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory;
-                        scroll-behavior: smooth; scrollbar-width: none; flex: 1; padding: 8px 2px;
-                    }
-                    .product-carousel .products-grid::-webkit-scrollbar { display: none; }
-                    .product-carousel .product-card { flex: 0 0 260px; scroll-snap-align: start; }
-                    .carousel-arrow { flex: 0 0 auto; cursor: pointer; padding: 10px 14px; font-size: 20px; }
-                    @media (max-width: 600px) {
-                        .product-carousel { gap: 6px; }
-                        .product-carousel .product-card { flex-basis: 80%; }
-                    }
-                </style>
-                <div class="product-carousel">
-                    <button class="carousel-arrow" type="button" aria-label="Scroll products left" onclick="scrollProducts(this, -1)">&lt;</button>
-                                    <div class="products-grid" id="products-grid">
-                  <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
-                            </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
-                            </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
-                            </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
-                            </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
-                            </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
-                            </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
-                            </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
-                            </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
-                            </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
-
+    <main>
+        <section class="shop-section" id="products">
+            <div class="container">
+                <div class="shop-heading">
+                    <div>
+                        <p class="eyebrow">Thoughtful essentials</p>
+                        <h1>Our Products</h1>
                     </div>
-                    <button class="carousel-arrow" type="button" aria-label="Scroll products right" onclick="scrollProducts(this, 1)">&gt;</button>
-                </div>
-                       
-                <div class="product-carousel">   
-                    <button class="carousel-arrow" type="button" aria-label="Scroll products left" onclick="scrollProducts(this, -1)">&lt;</button>
-                        <div class="products-grid" id="products-grid">
-                            <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
-                            </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                         </article>
-
-                         <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
-                            </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
-
-                    <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
-                            </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
-
-                    <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
-                            </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
-
-                    <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
-                            </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
-
-                    <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
-                            </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
-
-                    <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
-                            </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
-
-                    <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
-                            </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
-
-                    <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
-                            </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
-
-                    <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
-                            </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
-
-
-                        </div>
-                    <button class="carousel-arrow" type="button" aria-label="Scroll products right" onclick="scrollProducts(this, 1)">&gt;</button>
+                    <form class="shop-search" id="product-search" role="search" action="product.html" method="get">
+                        <label class="visually-hidden" for="product-query">Search products</label>
+                        <input id="product-query" name="q" type="search" placeholder="Search products...">
+                        <button class="button button-primary" type="submit">Search</button>
+                    </form>
                 </div>
 
-                <div class="product-carousel">   
-                    <button class="carousel-arrow" type="button" aria-label="Scroll products left" onclick="scrollProducts(this, -1)">&lt;</button>
-                        <div class="products-grid" id="products-grid">
-                            <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
+                <section class="category-section" aria-labelledby="bags-heading" data-category>
+                    <div class="category-heading">
+                        <div>
+                            <h2 id="bags-heading">Bags &amp; on the go</h2>
+                            <p>Easy swaps for errands and everyday carry.</p>
                         </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
+                        <div class="category-controls">
+                            <button class="scroll-button" type="button" aria-label="Scroll Bags and on the go left" data-scroll="-1">←</button>
+                            <button class="scroll-button" type="button" aria-label="Scroll Bags and on the go right" data-scroll="1">→</button>
+                        </div>
+                    </div>
+                    <div class="product-rail" role="region" aria-label="Bags and on the go products">
+                        <article class="product-card" data-category="bags">
+                            <div class="product-image-wrap">
+                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                                <span class="product-label">Bestseller</span>
                             </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                         </article>
-
-                         <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
+                            <div class="product-info">
+                                <div class="product-title-row"><h3>Everyday Tote</h3><span class="price">$18</span></div>
+                                <p>A sturdy cotton tote for market runs.</p>
+                                <button class="button button-outline" type="button">Add to Cart</button>
                             </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
-
-                    <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
+                        </article>
+                        <article class="product-card" data-category="bags">
+                            <div class="product-image-wrap">
+                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
                             </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
-
-                    <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
+                            <div class="product-info">
+                                <div class="product-title-row"><h3>Canvas Carryall</h3><span class="price">$24</span></div>
+                                <p>A roomier bag for days out.</p>
+                                <button class="button button-outline" type="button">Add to Cart</button>
                             </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
-
-                    <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
+                        </article>
+                        <article class="product-card" data-category="bags">
+                            <div class="product-image-wrap">
+                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
                             </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
-
-                    <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
+                            <div class="product-info">
+                                <div class="product-title-row"><h3>Day Trip Pack</h3><span class="price">$32</span></div>
+                                <p>Carry your daily essentials hands-free.</p>
+                                <button class="button button-outline" type="button">Add to Cart</button>
                             </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
-
-                    <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
+                        </article>
+                        <article class="product-card" data-category="bags">
+                            <div class="product-image-wrap">
+                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
                             </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
-
-                    <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
+                            <div class="product-info">
+                                <div class="product-title-row"><h3>Foldaway Shopper</h3><span class="price">$12</span></div>
+                                <p>Keep a spare bag close at hand.</p>
+                                <button class="button button-outline" type="button">Add to Cart</button>
                             </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
+                        </article>
+                    </div>
+                </section>
 
-                    <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
+                <section class="category-section" aria-labelledby="care-heading" data-category>
+                    <div class="category-heading">
+                        <div>
+                            <h2 id="care-heading">Bath &amp; body</h2>
+                            <p>Simple, low-waste bits for your daily routine.</p>
                         </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
+                        <div class="category-controls">
+                            <button class="scroll-button" type="button" aria-label="Scroll Bath and body left" data-scroll="-1">←</button>
+                            <button class="scroll-button" type="button" aria-label="Scroll Bath and body right" data-scroll="1">→</button>
+                        </div>
+                    </div>
+                    <div class="product-rail" role="region" aria-label="Bath and body products">
+                        <article class="product-card" data-category="care">
+                            <div class="product-image-wrap">
+                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                                <span class="product-label">Plastic-free</span>
                             </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
-                        </div>
-                    </article>
-
-                    <article class="product-card">
-                        <div class="product-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=750&q=80" alt="Reusable food container ready for a packed lunch" loading="lazy">
-                            <span class="product-label">Daily favorite</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-title-row">
-                                <h3>Lunch Keeper</h3>
-                                <span class="price">$22</span>
+                            <div class="product-info">
+                                <div class="product-title-row"><h3>Bamboo Toothbrush</h3><span class="price">$6</span></div>
+                                <p>A simple swap for your bathroom shelf.</p>
+                                <button class="button button-outline" type="button">Add to Cart</button>
                             </div>
-                            <p>Keep your lunch fresh and single-use plastics out.</p>
-                            <button class="button button-outline" type="button">Add to Cart</button>
+                        </article>
+                        <article class="product-card" data-category="care">
+                            <div class="product-image-wrap">
+                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-title-row"><h3>Face &amp; Body Bar</h3><span class="price">$10</span></div>
+                                <p>A handy bar with less packaging.</p>
+                                <button class="button button-outline" type="button">Add to Cart</button>
+                            </div>
+                        </article>
+                        <article class="product-card" data-category="care">
+                            <div class="product-image-wrap">
+                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-title-row"><h3>Refillable Soap Pump</h3><span class="price">$16</span></div>
+                                <p>Refill the bottle you already like.</p>
+                                <button class="button button-outline" type="button">Add to Cart</button>
+                            </div>
+                        </article>
+                        <article class="product-card" data-category="care">
+                            <div class="product-image-wrap">
+                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-title-row"><h3>Washable Cotton Pads</h3><span class="price">$12</span></div>
+                                <p>Wash and reuse, day after day.</p>
+                                <button class="button button-outline" type="button">Add to Cart</button>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="category-section" aria-labelledby="cleaning-heading" data-category>
+                    <div class="category-heading">
+                        <div>
+                            <h2 id="cleaning-heading">Home cleaning</h2>
+                            <p>Useful tools and refills for the weekly reset.</p>
                         </div>
-                    </article>
-
-
+                        <div class="category-controls">
+                            <button class="scroll-button" type="button" aria-label="Scroll Home cleaning left" data-scroll="-1">←</button>
+                            <button class="scroll-button" type="button" aria-label="Scroll Home cleaning right" data-scroll="1">→</button>
                         </div>
-                    <button class="carousel-arrow" type="button" aria-label="Scroll products right" onclick="scrollProducts(this, 1)">&gt;</button>
-                </div>
+                    </div>
+                    <div class="product-rail" role="region" aria-label="Home cleaning products">
+                        <article class="product-card" data-category="cleaning">
+                            <div class="product-image-wrap">
+                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                                <span class="product-label">Refill &amp; reuse</span>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-title-row"><h3>Refill Bottle</h3><span class="price">$14</span></div>
+                                <p>Keep the bottle; refill as you go.</p>
+                                <button class="button button-outline" type="button">Add to Cart</button>
+                            </div>
+                        </article>
+                        <article class="product-card" data-category="cleaning">
+                            <div class="product-image-wrap">
+                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-title-row"><h3>Wood Dish Brush</h3><span class="price">$9</span></div>
+                                <p>A sturdy brush for dishes and sinks.</p>
+                                <button class="button button-outline" type="button">Add to Cart</button>
+                            </div>
+                        </article>
+                        <article class="product-card" data-category="cleaning">
+                            <div class="product-image-wrap">
+                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-title-row"><h3>Cleaning Tablets</h3><span class="price">$11</span></div>
+                                <p>Add water to make a fresh cleaning spray.</p>
+                                <button class="button button-outline" type="button">Add to Cart</button>
+                            </div>
+                        </article>
+                        <article class="product-card" data-category="cleaning">
+                            <div class="product-image-wrap">
+                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-title-row"><h3>Everyday Cloths</h3><span class="price">$8</span></div>
+                                <p>Reusable cloths for everyday spills.</p>
+                                <button class="button button-outline" type="button">Add to Cart</button>
+                            </div>
+                        </article>
+                    </div>
+                </section>
 
-                <script>
-                    function scrollProducts(button, direction) {
-                        const products = button.closest('.product-carousel').querySelector('.products-grid');
-                        products.scrollBy({ left: direction * products.clientWidth * 0.8, behavior: 'smooth' });
-                    }
-                </script>
+                <section class="category-section" aria-labelledby="kitchen-heading" data-category>
+                    <div class="category-heading">
+                        <div>
+                            <h2 id="kitchen-heading">Kitchen &amp; dining</h2>
+                            <p>For packed lunches, leftovers, and slow mornings.</p>
+                        </div>
+                        <div class="category-controls">
+                            <button class="scroll-button" type="button" aria-label="Scroll Kitchen and dining left" data-scroll="-1">←</button>
+                            <button class="scroll-button" type="button" aria-label="Scroll Kitchen and dining right" data-scroll="1">→</button>
+                        </div>
+                    </div>
+                    <div class="product-rail" role="region" aria-label="Kitchen and dining products">
+                        <article class="product-card" data-category="kitchen">
+                            <div class="product-image-wrap">
+                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                                <span class="product-label">Daily favorite</span>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-title-row"><h3>Lunch Keeper</h3><span class="price">$22</span></div>
+                                <p>A dependable box for lunch on the go.</p>
+                                <button class="button button-outline" type="button">Add to Cart</button>
+                            </div>
+                        </article>
+                        <article class="product-card" data-category="kitchen">
+                            <div class="product-image-wrap">
+                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-title-row"><h3>Meal Prep Bowl</h3><span class="price">$18</span></div>
+                                <p>One bowl for lunch at home or work.</p>
+                                <button class="button button-outline" type="button">Add to Cart</button>
+                            </div>
+                        </article>
+                        <article class="product-card" data-category="kitchen">
+                            <div class="product-image-wrap">
+                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-title-row"><h3>Travel Cup</h3><span class="price">$20</span></div>
+                                <p>Your morning drink, minus the takeaway cup.</p>
+                                <button class="button button-outline" type="button">Add to Cart</button>
+                            </div>
+                        </article>
+                        <article class="product-card" data-category="kitchen">
+                            <div class="product-image-wrap">
+                                <img src="assets/product-placeholder.svg" alt="" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-title-row"><h3>Pantry Jar</h3><span class="price">$12</span></div>
+                                <p>Keep dry goods tidy and close by.</p>
+                                <button class="button button-outline" type="button">Add to Cart</button>
+                            </div>
+                        </article>
+                    </div>
+                </section>
 
+                <p class="shop-empty" id="no-products" role="status" hidden>No products match your search.</p>
+            </div>
+        </section>
+    </main>
 
-             </div>
-    
-              <!-- Footer and secondary navigation -->
     <footer class="site-footer" id="contact">
         <div class="container footer-content">
             <div class="footer-brand">
-                <a class="brand" href="#home"><span class="brand-leaf" aria-hidden="true">❧</span><span>EcoVort</span></a>
+                <a class="brand" href="index.html#home"><span class="brand-leaf" aria-hidden="true">❧</span><span>EcoVort</span></a>
                 <p>Little swaps. Lighter living.</p>
             </div>
             <nav class="footer-nav" aria-label="Footer navigation">
-                <a href="#home">Home</a>
+                <a href="index.html#home">Home</a>
                 <a href="#products">Products</a>
-                <a href="#about">About Us</a>
-                <a href="mailto:hello@ecovort.example">Contact</a>
+                <a href="about.html">About Us</a>
+                <a href="index.html#contact">Contact</a>
             </nav>
             <p class="copyright">© 2026 EcoVort. Made with care for our planet.</p>
         </div>
     </footer>
 
+    <script>
+        const searchForm = document.querySelector("#product-search");
+        const searchInput = document.querySelector("#product-query");
+        const categories = [...document.querySelectorAll("section[data-category]")];
+        const productRails = [...document.querySelectorAll(".product-rail")];
+        const noProductsMessage = document.querySelector("#no-products");
 
+        function updateScrollControls(rail) {
+            const category = rail.closest(".category-section");
+            const previousButton = category.querySelector('[data-scroll="-1"]');
+            const nextButton = category.querySelector('[data-scroll="1"]');
+            const canScroll = rail.scrollWidth > rail.clientWidth + 1;
+
+            previousButton.disabled = !canScroll || rail.scrollLeft <= 8;
+            nextButton.disabled = !canScroll || rail.scrollLeft + rail.clientWidth >= rail.scrollWidth - 8;
+        }
+
+        function filterProducts(query) {
+            let visibleProducts = 0;
+            const normalizedQuery = query.trim().toLowerCase();
+
+            for (const category of categories) {
+                let categoryProductCount = 0;
+
+                for (const card of category.querySelectorAll(".product-card")) {
+                    const searchableText = `${card.textContent} ${card.dataset.category}`.toLowerCase();
+                    const matches = searchableText.includes(normalizedQuery);
+                    card.hidden = !matches;
+                    categoryProductCount += Number(matches);
+                }
+
+                category.hidden = categoryProductCount === 0;
+                visibleProducts += categoryProductCount;
+
+                const rail = category.querySelector(".product-rail");
+                rail.scrollLeft = 0;
+                updateScrollControls(rail);
+            }
+
+            noProductsMessage.hidden = visibleProducts > 0;
+        }
+
+        for (const rail of productRails) {
+            rail.addEventListener("scroll", () => updateScrollControls(rail));
+            rail.closest(".category-section").querySelectorAll("[data-scroll]").forEach(button => {
+                button.addEventListener("click", () => {
+                    const direction = Number(button.dataset.scroll);
+                    const card = rail.querySelector(".product-card:not([hidden])");
+                    const gap = Number.parseFloat(getComputedStyle(rail).columnGap) || 0;
+                    const distance = card ? card.getBoundingClientRect().width + gap : rail.clientWidth;
+                    rail.scrollBy({ left: direction * distance, behavior: "smooth" });
+                });
+            });
+        }
+
+        searchInput.value = new URLSearchParams(window.location.search).get("q") || "";
+        filterProducts(searchInput.value);
+        searchInput.addEventListener("input", () => filterProducts(searchInput.value));
+        searchForm.addEventListener("submit", event => {
+            event.preventDefault();
+            filterProducts(searchInput.value);
+        });
+        window.addEventListener("resize", () => productRails.forEach(updateScrollControls));
+    </script>
 </body>
 </html>
