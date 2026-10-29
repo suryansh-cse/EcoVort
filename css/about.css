@@ -165,7 +165,7 @@
     font-size: 0.9rem;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 860px) {
     .about-lead-inner,
     .about-intro-inner,
     .about-note,
