@@ -18,7 +18,7 @@
                 <span>EcoVort</span>
             </a>
             <nav class="main-nav" aria-label="Main navigation">
-                <a href="#home" aria-current="page">Home</a>
+                <a href="index.html" aria-current="page">Home</a>
                 <a href="product.html">Products</a>
                 <a href="about.html">About</a>
             </nav>
@@ -36,7 +36,7 @@
                 <h1>Shopping Cart</h1>
             </div>
 
-            <a href="index.html#shop" class="back-link">
+            <a href="product.html" class="back-link">
                 ← Continue shopping
             </a>
         </div>
@@ -44,125 +44,82 @@
 
         <div class="cart-layout">
 
-            <!-- Cart Products -->
-            <section class="cart-items">
+          <!-- Cart Products -->
+<section class="cart-items">
 
-                <div class="cart-labels">
-                    <span>PRODUCT</span>
-                    <span>QUANTITY</span>
-                    <span>TOTAL</span>
-                </div>
+    <div class="cart-labels" id="cart-labels">
+        <span>PRODUCT</span>
+        <span>QUANTITY</span>
+        <span>TOTAL</span>
+    </div>
 
+    <!-- JavaScript will insert cart products here -->
+    <div id="cart-items-list"></div>
 
-                <!-- Product One -->
-                <article class="cart-item">
+    <!-- Displayed when cart is empty -->
+    <div class="cart-empty" id="cart-empty" hidden>
+        <p class="eyebrow">NOTHING HERE YET</p>
+        <h2>Your cart is waiting.</h2>
+        <p>Discover thoughtful everyday essentials and add something you love.</p>
+        <a href="product.html" class="checkout-button">
+            Explore Products <span>→</span>
+        </a>
+    </div>
 
-                    <div class="product-info">
-                        <div class="product-image">
-                            <img src="images/bamboo-toothbrush.jpg"
-                                 alt="Bamboo toothbrush">
-                        </div>
+    <div class="cart-bottom" id="cart-bottom">
+        <p>Good choices make a difference. 🌱</p>
+        <a href="product.html">Continue exploring →</a>
+    </div>
 
-                        <div class="product-details">
-                            <p class="product-category">PERSONAL CARE</p>
-                            <h3>Bamboo Toothbrush</h3>
-                            <p class="product-price">₹149</p>
-                            <a href="#" class="remove-item">Remove</a>
-                        </div>
-                    </div>
-
-                    <div class="quantity-control">
-                        <button type="button" aria-label="Decrease quantity">−</button>
-                        <span>1</span>
-                        <button type="button" aria-label="Increase quantity">+</button>
-                    </div>
-
-                    <p class="item-total">₹149</p>
-
-                </article>
-
-
-                <!-- Product Two -->
-                <article class="cart-item">
-
-                    <div class="product-info">
-                        <div class="product-image">
-                            <img src="images/reusable-bag.jpg"
-                                 alt="Reusable cotton shopping bag">
-                        </div>
-
-                        <div class="product-details">
-                            <p class="product-category">EVERYDAY ESSENTIALS</p>
-                            <h3>Reusable Cotton Bag</h3>
-                            <p class="product-price">₹249</p>
-                            <a href="#" class="remove-item">Remove</a>
-                        </div>
-                    </div>
-
-                    <div class="quantity-control">
-                        <button type="button" aria-label="Decrease quantity">−</button>
-                        <span>1</span>
-                        <button type="button" aria-label="Increase quantity">+</button>
-                    </div>
-
-                    <p class="item-total">₹249</p>
-
-                </article>
-
-
-                <div class="cart-bottom">
-                    <p>Good choices make a difference. 🌱</p>
-                    <a href="index.html#shop">Continue exploring →</a>
-                </div>
-
-            </section>
+</section>
 
 
             <!-- Order Summary -->
-            <aside class="order-summary">
+            <!-- Order Summary -->
+<aside class="order-summary">
 
-                <p class="eyebrow">YOUR ORDER</p>
-                <h2>Order Summary</h2>
+    <p class="eyebrow">YOUR ORDER</p>
+    <h2>Order Summary</h2>
 
-                <div class="summary-row">
-                    <span>Subtotal</span>
-                    <span>₹398</span>
-                </div>
+    <div class="summary-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">$0.00</span>
+    </div>
 
-                <div class="summary-row">
-                    <span>Shipping</span>
-                    <span>₹40</span>
-                </div>
+    <div class="summary-row">
+        <span>Shipping</span>
+        <span id="cart-shipping">Calculated at checkout</span>
+    </div>
 
-                <div class="summary-row">
-                    <span>Discount</span>
-                    <span class="discount">− ₹0</span>
-                </div>
+    <div class="summary-row">
+        <span>Discount</span>
+        <span class="discount" id="cart-discount">− $0.00</span>
+    </div>
 
-                <div class="summary-divider"></div>
+    <div class="summary-divider"></div>
 
-                <div class="summary-total">
-                    <span>Total</span>
-                    <strong>₹438</strong>
-                </div>
+    <div class="summary-total">
+        <span>Total</span>
+        <strong id="cart-total">$0.00</strong>
+    </div>
 
-                <button type="button" class="checkout-button">
-                    Proceed to Checkout <span>→</span>
-                </button>
+    <button type="button" class="checkout-button" id="checkout-button">
+        Proceed to Checkout <span>→</span>
+    </button>
 
-                <p class="shipping-note">
-                    Shipping and taxes are calculated at checkout.
-                </p>
+    <p class="shipping-note">
+        Shipping costs will be calculated at checkout.
+    </p>
 
-                <div class="summary-footer">
-                    <span>♻</span>
-                    <p>
-                        Every thoughtful purchase is a small step
-                        towards a greener everyday life.
-                    </p>
-                </div>
+    <div class="summary-footer">
+        <span>♻</span>
+        <p>
+            Every thoughtful purchase is a small step
+            towards a greener everyday life.
+        </p>
+    </div>
 
-            </aside>
+</aside>
 
         </div>
 
@@ -187,6 +144,8 @@
             <p class="copyright">© 2026 EcoVort. Browse at your own pace.</p>
         </div>
     </footer>
+
+        <script src="js/cart.js" defer></script>
 
 </body>
 </html>

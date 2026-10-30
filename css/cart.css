@@ -441,3 +441,52 @@
     }
 
 }
+
+/* Dynamic Cart Additions */
+
+.cart-empty {
+    padding: 65px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+}
+
+.cart-empty h2 {
+    font-family: var(--serif);
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 12px;
+}
+
+.cart-empty > p:not(.eyebrow) {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+.cart-empty .checkout-button {
+    max-width: 220px;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+.remove-item {
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: var(--sans);
+    cursor: pointer;
+}
+
+.quantity-control button:hover {
+    color: var(--clay);
+}
+
+.checkout-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.cart-item .product-image img {
+    object-fit: cover;
+}

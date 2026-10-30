@@ -14,248 +14,621 @@
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
         <div class="container header-content">
-            <a class="brand" href="index.html#home" aria-label="EcoVort home">
+            <a class="brand" href="index.html" aria-label="EcoVort home">
                 <img class="brand-mark" src="assets/ecovort-logo.svg" alt="">
                 <span>EcoVort</span>
             </a>
 
             <nav class="main-nav" aria-label="Main navigation">
-                <a href="index.html#home">Home</a>
-                <a href="product.html#products" aria-current="page">Products</a>
+                <a href="index.html">Home</a>
+                <a href="product.html" aria-current="page">Products</a>
                 <a href="about.html">About</a>
             </nav>
-            <a class="shop-link" href="#products">Browse shop <span aria-hidden="true">↗</span></a>
+            <a class="shop-link" href="cart.html">Browse shop <span aria-hidden="true">↗</span></a>
         </div>
     </header>
 
-    <main id="main-content">
-        <section class="shop-section" id="products">
-            <div class="container">
-                <div class="shop-heading">
-                    <div>
-                        <p class="eyebrow">The EcoVort catalogue</p>
-                        <h1>Everyday reusables.</h1>
-                    </div>
-                    <p class="shop-intro">Browse by routine, or search for something specific. Prices are listed for reference.</p>
-                    <form class="shop-search" id="product-search" role="search" action="product.html" method="get">
-                        <label class="visually-hidden" for="product-query">Search products</label>
-                        <input id="product-query" name="q" type="search" placeholder="Search products...">
-                        <button class="button button-primary" type="submit">Search</button>
-                    </form>
+<main id="main-content">
+
+    <section class="shop-section" id="products">
+        <div class="container">
+
+            <!-- Shop Heading -->
+            <div class="shop-heading">
+                <div>
+                    <p class="eyebrow">The EcoVort catalogue</p>
+                    <h1>Everyday reusables.</h1>
                 </div>
 
-                <section class="category-section" aria-labelledby="bags-heading" data-category>
-                    <div class="category-heading">
-                        <div>
-                            <h2 id="bags-heading">Bags &amp; on the go</h2>
-                            <p>Easy swaps for errands and everyday carry.</p>
-                        </div>
-                        <div class="category-controls">
-                            <button class="scroll-button" type="button" aria-label="Scroll Bags and on the go left" data-scroll="-1">←</button>
-                            <button class="scroll-button" type="button" aria-label="Scroll Bags and on the go right" data-scroll="1">→</button>
-                        </div>
-                    </div>
-                    <div class="product-rail" role="region" aria-label="Bags and on the go products">
-                        <article class="product-card" data-category="bags">
-                            <div class="product-image-wrap">
-                                <img src="assets/category-carry.svg" alt="" loading="lazy">
-                                <span class="product-label">Bestseller</span>
-                            </div>
-                            <div class="product-info">
-                                <div class="product-title-row"><h3>Everyday Tote</h3><span class="price">$18</span></div>
-                                <p>A sturdy cotton tote for market runs.</p>
-                            </div>
-                        </article>
-                        <article class="product-card" data-category="bags">
-                            <div class="product-image-wrap">
-                                <img src="assets/category-carry.svg" alt="" loading="lazy">
-                            </div>
-                            <div class="product-info">
-                                <div class="product-title-row"><h3>Canvas Carryall</h3><span class="price">$24</span></div>
-                                <p>A roomier bag for days out.</p>
-                            </div>
-                        </article>
-                        <article class="product-card" data-category="bags">
-                            <div class="product-image-wrap">
-                                <img src="assets/category-carry.svg" alt="" loading="lazy">
-                            </div>
-                            <div class="product-info">
-                                <div class="product-title-row"><h3>Day Trip Pack</h3><span class="price">$32</span></div>
-                                <p>Carry your daily essentials hands-free.</p>
-                            </div>
-                        </article>
-                        <article class="product-card" data-category="bags">
-                            <div class="product-image-wrap">
-                                <img src="assets/category-carry.svg" alt="" loading="lazy">
-                            </div>
-                            <div class="product-info">
-                                <div class="product-title-row"><h3>Foldaway Shopper</h3><span class="price">$12</span></div>
-                                <p>Keep a spare bag close at hand.</p>
-                            </div>
-                        </article>
-                    </div>
-                </section>
+                <p class="shop-intro">
+                    Browse by routine, or search for something specific.
+                    Prices are listed for reference.
+                </p>
 
-                <section class="category-section" aria-labelledby="care-heading" data-category>
-                    <div class="category-heading">
-                        <div>
-                            <h2 id="care-heading">Bath &amp; body</h2>
-                            <p>Simple, low-waste bits for your daily routine.</p>
-                        </div>
-                        <div class="category-controls">
-                            <button class="scroll-button" type="button" aria-label="Scroll Bath and body left" data-scroll="-1">←</button>
-                            <button class="scroll-button" type="button" aria-label="Scroll Bath and body right" data-scroll="1">→</button>
-                        </div>
-                    </div>
-                    <div class="product-rail" role="region" aria-label="Bath and body products">
-                        <article class="product-card" data-category="care">
-                            <div class="product-image-wrap">
-                                <img src="assets/category-care.svg" alt="" loading="lazy">
-                                <span class="product-label">Plastic-free</span>
-                            </div>
-                            <div class="product-info">
-                                <div class="product-title-row"><h3>Bamboo Toothbrush</h3><span class="price">$6</span></div>
-                                <p>A simple swap for your bathroom shelf.</p>
-                            </div>
-                        </article>
-                        <article class="product-card" data-category="care">
-                            <div class="product-image-wrap">
-                                <img src="assets/category-care.svg" alt="" loading="lazy">
-                            </div>
-                            <div class="product-info">
-                                <div class="product-title-row"><h3>Face &amp; Body Bar</h3><span class="price">$10</span></div>
-                                <p>A handy bar with less packaging.</p>
-                            </div>
-                        </article>
-                        <article class="product-card" data-category="care">
-                            <div class="product-image-wrap">
-                                <img src="assets/category-care.svg" alt="" loading="lazy">
-                            </div>
-                            <div class="product-info">
-                                <div class="product-title-row"><h3>Refillable Soap Pump</h3><span class="price">$16</span></div>
-                                <p>Refill the bottle you already like.</p>
-                            </div>
-                        </article>
-                        <article class="product-card" data-category="care">
-                            <div class="product-image-wrap">
-                                <img src="assets/category-care.svg" alt="" loading="lazy">
-                            </div>
-                            <div class="product-info">
-                                <div class="product-title-row"><h3>Washable Cotton Pads</h3><span class="price">$12</span></div>
-                                <p>Wash and reuse, day after day.</p>
-                            </div>
-                        </article>
-                    </div>
-                </section>
+                <form class="shop-search" id="product-search" role="search">
+                    <label class="visually-hidden" for="product-query">
+                        Search products
+                    </label>
 
-                <section class="category-section" aria-labelledby="cleaning-heading" data-category>
-                    <div class="category-heading">
-                        <div>
-                            <h2 id="cleaning-heading">Home cleaning</h2>
-                            <p>Useful tools and refills for the weekly reset.</p>
-                        </div>
-                        <div class="category-controls">
-                            <button class="scroll-button" type="button" aria-label="Scroll Home cleaning left" data-scroll="-1">←</button>
-                            <button class="scroll-button" type="button" aria-label="Scroll Home cleaning right" data-scroll="1">→</button>
-                        </div>
-                    </div>
-                    <div class="product-rail" role="region" aria-label="Home cleaning products">
-                        <article class="product-card" data-category="cleaning">
-                            <div class="product-image-wrap">
-                                <img src="assets/category-cleaning.svg" alt="" loading="lazy">
-                                <span class="product-label">Refill &amp; reuse</span>
-                            </div>
-                            <div class="product-info">
-                                <div class="product-title-row"><h3>Refill Bottle</h3><span class="price">$14</span></div>
-                                <p>Keep the bottle; refill as you go.</p>
-                            </div>
-                        </article>
-                        <article class="product-card" data-category="cleaning">
-                            <div class="product-image-wrap">
-                                <img src="assets/category-cleaning.svg" alt="" loading="lazy">
-                            </div>
-                            <div class="product-info">
-                                <div class="product-title-row"><h3>Wood Dish Brush</h3><span class="price">$9</span></div>
-                                <p>A sturdy brush for dishes and sinks.</p>
-                            </div>
-                        </article>
-                        <article class="product-card" data-category="cleaning">
-                            <div class="product-image-wrap">
-                                <img src="assets/category-cleaning.svg" alt="" loading="lazy">
-                            </div>
-                            <div class="product-info">
-                                <div class="product-title-row"><h3>Cleaning Tablets</h3><span class="price">$11</span></div>
-                                <p>Add water to make a fresh cleaning spray.</p>
-                            </div>
-                        </article>
-                        <article class="product-card" data-category="cleaning">
-                            <div class="product-image-wrap">
-                                <img src="assets/category-cleaning.svg" alt="" loading="lazy">
-                            </div>
-                            <div class="product-info">
-                                <div class="product-title-row"><h3>Everyday Cloths</h3><span class="price">$8</span></div>
-                                <p>Reusable cloths for everyday spills.</p>
-                            </div>
-                        </article>
-                    </div>
-                </section>
+                    <input
+                        id="product-query"
+                        name="q"
+                        type="search"
+                        placeholder="Search products..."
+                    >
 
-                <section class="category-section" aria-labelledby="kitchen-heading" data-category>
-                    <div class="category-heading">
-                        <div>
-                            <h2 id="kitchen-heading">Kitchen &amp; dining</h2>
-                            <p>For packed lunches, leftovers, and slow mornings.</p>
-                        </div>
-                        <div class="category-controls">
-                            <button class="scroll-button" type="button" aria-label="Scroll Kitchen and dining left" data-scroll="-1">←</button>
-                            <button class="scroll-button" type="button" aria-label="Scroll Kitchen and dining right" data-scroll="1">→</button>
-                        </div>
-                    </div>
-                    <div class="product-rail" role="region" aria-label="Kitchen and dining products">
-                        <article class="product-card" data-category="kitchen">
-                            <div class="product-image-wrap">
-                                <img src="assets/category-kitchen.svg" alt="" loading="lazy">
-                                <span class="product-label">Daily favorite</span>
-                            </div>
-                            <div class="product-info">
-                                <div class="product-title-row"><h3>Lunch Keeper</h3><span class="price">$22</span></div>
-                                <p>A dependable box for lunch on the go.</p>
-                            </div>
-                        </article>
-                        <article class="product-card" data-category="kitchen">
-                            <div class="product-image-wrap">
-                                <img src="assets/category-kitchen.svg" alt="" loading="lazy">
-                            </div>
-                            <div class="product-info">
-                                <div class="product-title-row"><h3>Meal Prep Bowl</h3><span class="price">$18</span></div>
-                                <p>One bowl for lunch at home or work.</p>
-                            </div>
-                        </article>
-                        <article class="product-card" data-category="kitchen">
-                            <div class="product-image-wrap">
-                                <img src="assets/category-kitchen.svg" alt="" loading="lazy">
-                            </div>
-                            <div class="product-info">
-                                <div class="product-title-row"><h3>Travel Cup</h3><span class="price">$20</span></div>
-                                <p>Your morning drink, minus the takeaway cup.</p>
-                            </div>
-                        </article>
-                        <article class="product-card" data-category="kitchen">
-                            <div class="product-image-wrap">
-                                <img src="assets/category-kitchen.svg" alt="" loading="lazy">
-                            </div>
-                            <div class="product-info">
-                                <div class="product-title-row"><h3>Pantry Jar</h3><span class="price">$12</span></div>
-                                <p>Keep dry goods tidy and close by.</p>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-
-                <p class="shop-empty" id="no-products" role="status" hidden>No products match your search.</p>
+                    <button class="button button-primary" type="submit">
+                        Search
+                    </button>
+                </form>
             </div>
-        </section>
-    </main>
+
+
+            <!-- =================================
+                 BAGS & ON THE GO
+            ================================== -->
+
+            <section class="category-section" aria-labelledby="bags-heading" data-category>
+
+                <div class="category-heading">
+                    <div>
+                        <h2 id="bags-heading">Bags &amp; on the go</h2>
+                        <p>Easy swaps for errands and everyday carry.</p>
+                    </div>
+
+                    <div class="category-controls">
+                        <button class="scroll-button" type="button"
+                                aria-label="Scroll left" data-scroll="-1">←</button>
+
+                        <button class="scroll-button" type="button"
+                                aria-label="Scroll right" data-scroll="1">→</button>
+                    </div>
+                </div>
+
+                <div class="product-rail" role="region" aria-label="Bags and on the go products">
+
+                    <!-- Product 1 -->
+                    <article class="product-card"
+                        data-id="everyday-tote"
+                        data-name="Everyday Tote"
+                        data-price="18"
+                        data-category="bags">
+
+                        <div class="product-image-wrap">
+                            <img src="assets/category-carry.svg"
+                                 alt="Everyday Tote" loading="lazy">
+                            <span class="product-label">Bestseller</span>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-title-row">
+                                <h3>Everyday Tote</h3>
+                                <span class="price">$18</span>
+                            </div>
+
+                            <p>A sturdy cotton tote for market runs.</p>
+
+                            <button class="button button-primary add-to-cart"
+                                    type="button" data-add-to-cart>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </article>
+
+
+                    <!-- Product 2 -->
+                    <article class="product-card"
+                        data-id="canvas-carryall"
+                        data-name="Canvas Carryall"
+                        data-price="24"
+                        data-category="bags">
+
+                        <div class="product-image-wrap">
+                            <img src="assets/category-carry.svg"
+                                 alt="Canvas Carryall" loading="lazy">
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-title-row">
+                                <h3>Canvas Carryall</h3>
+                                <span class="price">$24</span>
+                            </div>
+
+                            <p>A roomier bag for days out.</p>
+
+                            <button class="button button-primary add-to-cart"
+                                    type="button" data-add-to-cart>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </article>
+
+
+                    <!-- Product 3 -->
+                    <article class="product-card"
+                        data-id="day-trip-pack"
+                        data-name="Day Trip Pack"
+                        data-price="32"
+                        data-category="bags">
+
+                        <div class="product-image-wrap">
+                            <img src="assets/category-carry.svg"
+                                 alt="Day Trip Pack" loading="lazy">
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-title-row">
+                                <h3>Day Trip Pack</h3>
+                                <span class="price">$32</span>
+                            </div>
+
+                            <p>Carry your daily essentials hands-free.</p>
+
+                            <button class="button button-primary add-to-cart"
+                                    type="button" data-add-to-cart>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </article>
+
+
+                    <!-- Product 4 -->
+                    <article class="product-card"
+                        data-id="foldaway-shopper"
+                        data-name="Foldaway Shopper"
+                        data-price="12"
+                        data-category="bags">
+
+                        <div class="product-image-wrap">
+                            <img src="assets/category-carry.svg"
+                                 alt="Foldaway Shopper" loading="lazy">
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-title-row">
+                                <h3>Foldaway Shopper</h3>
+                                <span class="price">$12</span>
+                            </div>
+
+                            <p>Keep a spare bag close at hand.</p>
+
+                            <button class="button button-primary add-to-cart"
+                                    type="button" data-add-to-cart>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+
+            <!-- =================================
+                 BATH & BODY
+            ================================== -->
+
+            <section class="category-section" aria-labelledby="care-heading" data-category>
+
+                <div class="category-heading">
+                    <div>
+                        <h2 id="care-heading">Bath &amp; body</h2>
+                        <p>Simple, low-waste bits for your daily routine.</p>
+                    </div>
+
+                    <div class="category-controls">
+                        <button class="scroll-button" type="button"
+                                aria-label="Scroll left" data-scroll="-1">←</button>
+
+                        <button class="scroll-button" type="button"
+                                aria-label="Scroll right" data-scroll="1">→</button>
+                    </div>
+                </div>
+
+                <div class="product-rail" role="region" aria-label="Bath and body products">
+
+                    <!-- Product 5 -->
+                    <article class="product-card"
+                        data-id="bamboo-toothbrush"
+                        data-name="Bamboo Toothbrush"
+                        data-price="6"
+                        data-category="care">
+
+                        <div class="product-image-wrap">
+                            <img src="assets/category-care.svg"
+                                 alt="Bamboo Toothbrush" loading="lazy">
+                            <span class="product-label">Plastic-free</span>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-title-row">
+                                <h3>Bamboo Toothbrush</h3>
+                                <span class="price">$6</span>
+                            </div>
+
+                            <p>A simple swap for your bathroom shelf.</p>
+
+                            <button class="button button-primary add-to-cart"
+                                    type="button" data-add-to-cart>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </article>
+
+
+                    <!-- Product 6 -->
+                    <article class="product-card"
+                        data-id="face-body-bar"
+                        data-name="Face & Body Bar"
+                        data-price="10"
+                        data-category="care">
+
+                        <div class="product-image-wrap">
+                            <img src="assets/category-care.svg"
+                                 alt="Face and Body Bar" loading="lazy">
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-title-row">
+                                <h3>Face &amp; Body Bar</h3>
+                                <span class="price">$10</span>
+                            </div>
+
+                            <p>A handy bar with less packaging.</p>
+
+                            <button class="button button-primary add-to-cart"
+                                    type="button" data-add-to-cart>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </article>
+
+
+                    <!-- Product 7 -->
+                    <article class="product-card"
+                        data-id="refillable-soap-pump"
+                        data-name="Refillable Soap Pump"
+                        data-price="16"
+                        data-category="care">
+
+                        <div class="product-image-wrap">
+                            <img src="assets/category-care.svg"
+                                 alt="Refillable Soap Pump" loading="lazy">
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-title-row">
+                                <h3>Refillable Soap Pump</h3>
+                                <span class="price">$16</span>
+                            </div>
+
+                            <p>Refill the bottle you already like.</p>
+
+                            <button class="button button-primary add-to-cart"
+                                    type="button" data-add-to-cart>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </article>
+
+
+                    <!-- Product 8 -->
+                    <article class="product-card"
+                        data-id="washable-cotton-pads"
+                        data-name="Washable Cotton Pads"
+                        data-price="12"
+                        data-category="care">
+
+                        <div class="product-image-wrap">
+                            <img src="assets/category-care.svg"
+                                 alt="Washable Cotton Pads" loading="lazy">
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-title-row">
+                                <h3>Washable Cotton Pads</h3>
+                                <span class="price">$12</span>
+                            </div>
+
+                            <p>Wash and reuse, day after day.</p>
+
+                            <button class="button button-primary add-to-cart"
+                                    type="button" data-add-to-cart>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+
+            <!-- =================================
+                 HOME CLEANING
+            ================================== -->
+
+            <section class="category-section" aria-labelledby="cleaning-heading" data-category>
+
+                <div class="category-heading">
+                    <div>
+                        <h2 id="cleaning-heading">Home cleaning</h2>
+                        <p>Useful tools and refills for the weekly reset.</p>
+                    </div>
+
+                    <div class="category-controls">
+                        <button class="scroll-button" type="button"
+                                aria-label="Scroll left" data-scroll="-1">←</button>
+
+                        <button class="scroll-button" type="button"
+                                aria-label="Scroll right" data-scroll="1">→</button>
+                    </div>
+                </div>
+
+                <div class="product-rail" role="region" aria-label="Home cleaning products">
+
+                    <!-- Product 9 -->
+                    <article class="product-card"
+                        data-id="refill-bottle"
+                        data-name="Refill Bottle"
+                        data-price="14"
+                        data-category="cleaning">
+
+                        <div class="product-image-wrap">
+                            <img src="assets/category-cleaning.svg"
+                                 alt="Refill Bottle" loading="lazy">
+                            <span class="product-label">Refill &amp; reuse</span>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-title-row">
+                                <h3>Refill Bottle</h3>
+                                <span class="price">$14</span>
+                            </div>
+
+                            <p>Keep the bottle; refill as you go.</p>
+
+                            <button class="button button-primary add-to-cart"
+                                    type="button" data-add-to-cart>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </article>
+
+
+                    <!-- Product 10 -->
+                    <article class="product-card"
+                        data-id="wood-dish-brush"
+                        data-name="Wood Dish Brush"
+                        data-price="9"
+                        data-category="cleaning">
+
+                        <div class="product-image-wrap">
+                            <img src="assets/category-cleaning.svg"
+                                 alt="Wood Dish Brush" loading="lazy">
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-title-row">
+                                <h3>Wood Dish Brush</h3>
+                                <span class="price">$9</span>
+                            </div>
+
+                            <p>A sturdy brush for dishes and sinks.</p>
+
+                            <button class="button button-primary add-to-cart"
+                                    type="button" data-add-to-cart>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </article>
+
+
+                    <!-- Product 11 -->
+                    <article class="product-card"
+                        data-id="cleaning-tablets"
+                        data-name="Cleaning Tablets"
+                        data-price="11"
+                        data-category="cleaning">
+
+                        <div class="product-image-wrap">
+                            <img src="assets/category-cleaning.svg"
+                                 alt="Cleaning Tablets" loading="lazy">
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-title-row">
+                                <h3>Cleaning Tablets</h3>
+                                <span class="price">$11</span>
+                            </div>
+
+                            <p>Add water to make a fresh cleaning spray.</p>
+
+                            <button class="button button-primary add-to-cart"
+                                    type="button" data-add-to-cart>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </article>
+
+
+                    <!-- Product 12 -->
+                    <article class="product-card"
+                        data-id="everyday-cloths"
+                        data-name="Everyday Cloths"
+                        data-price="8"
+                        data-category="cleaning">
+
+                        <div class="product-image-wrap">
+                            <img src="assets/category-cleaning.svg"
+                                 alt="Everyday Cloths" loading="lazy">
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-title-row">
+                                <h3>Everyday Cloths</h3>
+                                <span class="price">$8</span>
+                            </div>
+
+                            <p>Reusable cloths for everyday spills.</p>
+
+                            <button class="button button-primary add-to-cart"
+                                    type="button" data-add-to-cart>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+
+            <!-- =================================
+                 KITCHEN & DINING
+            ================================== -->
+
+            <section class="category-section" aria-labelledby="kitchen-heading" data-category>
+
+                <div class="category-heading">
+                    <div>
+                        <h2 id="kitchen-heading">Kitchen &amp; dining</h2>
+                        <p>For packed lunches, leftovers, and slow mornings.</p>
+                    </div>
+
+                    <div class="category-controls">
+                        <button class="scroll-button" type="button"
+                                aria-label="Scroll left" data-scroll="-1">←</button>
+
+                        <button class="scroll-button" type="button"
+                                aria-label="Scroll right" data-scroll="1">→</button>
+                    </div>
+                </div>
+
+                <div class="product-rail" role="region" aria-label="Kitchen and dining products">
+
+                    <!-- Product 13 -->
+                    <article class="product-card"
+                        data-id="lunch-keeper"
+                        data-name="Lunch Keeper"
+                        data-price="22"
+                        data-category="kitchen">
+
+                        <div class="product-image-wrap">
+                            <img src="assets/category-kitchen.svg"
+                                 alt="Lunch Keeper" loading="lazy">
+                            <span class="product-label">Daily favorite</span>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-title-row">
+                                <h3>Lunch Keeper</h3>
+                                <span class="price">$22</span>
+                            </div>
+
+                            <p>A dependable box for lunch on the go.</p>
+
+                            <button class="button button-primary add-to-cart"
+                                    type="button" data-add-to-cart>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </article>
+
+
+                    <!-- Product 14 -->
+                    <article class="product-card"
+                        data-id="meal-prep-bowl"
+                        data-name="Meal Prep Bowl"
+                        data-price="18"
+                        data-category="kitchen">
+
+                        <div class="product-image-wrap">
+                            <img src="assets/category-kitchen.svg"
+                                 alt="Meal Prep Bowl" loading="lazy">
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-title-row">
+                                <h3>Meal Prep Bowl</h3>
+                                <span class="price">$18</span>
+                            </div>
+
+                            <p>One bowl for lunch at home or work.</p>
+
+                            <button class="button button-primary add-to-cart"
+                                    type="button" data-add-to-cart>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </article>
+
+
+                    <!-- Product 15 -->
+                    <article class="product-card"
+                        data-id="travel-cup"
+                        data-name="Travel Cup"
+                        data-price="20"
+                        data-category="kitchen">
+
+                        <div class="product-image-wrap">
+                            <img src="assets/category-kitchen.svg"
+                                 alt="Travel Cup" loading="lazy">
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-title-row">
+                                <h3>Travel Cup</h3>
+                                <span class="price">$20</span>
+                            </div>
+
+                            <p>Your morning drink, minus the takeaway cup.</p>
+
+                            <button class="button button-primary add-to-cart"
+                                    type="button" data-add-to-cart>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </article>
+
+
+                    <!-- Product 16 -->
+                    <article class="product-card"
+                        data-id="pantry-jar"
+                        data-name="Pantry Jar"
+                        data-price="12"
+                        data-category="kitchen">
+
+                        <div class="product-image-wrap">
+                            <img src="assets/category-kitchen.svg"
+                                 alt="Pantry Jar" loading="lazy">
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-title-row">
+                                <h3>Pantry Jar</h3>
+                                <span class="price">$12</span>
+                            </div>
+
+                            <p>Keep dry goods tidy and close by.</p>
+
+                            <button class="button button-primary add-to-cart"
+                                    type="button" data-add-to-cart>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+
+            <!-- No Search Results -->
+            <p class="shop-empty" id="no-products" role="status" hidden>
+                No products match your search.
+            </p>
+
+        </div>
+    </section>
+
+</main>
 
     <footer class="site-footer" id="contact">
         <div class="container footer-content">
@@ -276,5 +649,6 @@
     </footer>
 
         <script src="js/product.js"></script>
+        <script src="js/cart.js" defer></script>
 </body>
 </html>
