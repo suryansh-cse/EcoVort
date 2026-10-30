@@ -674,3 +674,25 @@ input:focus-visible {
         transition-duration: 0.01ms !important;
     }
 }
+
+
+.account-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+
+.account-link:hover {
+    color: var(--clay);
+}
+
+.account-link svg {
+    flex-shrink: 0;
+}
