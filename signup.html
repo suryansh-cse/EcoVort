@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | EcoVort</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+
+    <script src="assets/js/auth.js" defer></script>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-content">
+
+            <a class="brand" href="index.html">
+                <img class="brand-mark" src="assets/ecovort-logo.svg" alt="">
+                <span>EcoVort</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="product.html">Products</a>
+                <a href="about.html">About</a>
+            </nav>
+
+            <a class="shop-link" href="product.html">
+                Browse shop <span aria-hidden="true">↗</span>
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- Signup -->
+    <main id="main-content" class="auth-main">
+
+        <section class="auth-card signup-card">
+
+            <div class="auth-heading">
+
+                <p class="eyebrow">JOIN ECOVORT</p>
+
+                <h1>Create your account.</h1>
+
+                <p>
+                    A few details, and you're ready to explore
+                    a more thoughtful everyday.
+                </p>
+
+            </div>
+
+
+            <form id="signup-form">
+
+                <div class="form-group">
+                    <label for="signup-name">Full name</label>
+
+                    <input
+                        type="text"
+                        id="signup-name"
+                        placeholder="Your name"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="signup-email">Email address</label>
+
+                    <input
+                        type="email"
+                        id="signup-email"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+
+                    <div class="label-row">
+                        <label for="signup-password">Password</label>
+
+                        <button
+                            type="button"
+                            class="text-button"
+                            data-toggle-password="signup-password">
+                            Show
+                        </button>
+                    </div>
+
+                    <input
+                        type="password"
+                        id="signup-password"
+                        placeholder="At least 8 characters"
+                        minlength="8"
+                        autocomplete="new-password"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+                    <label for="confirm-password">
+                        Confirm password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirm-password"
+                        placeholder="Enter your password again"
+                        autocomplete="new-password"
+                        required
+                    >
+                </div>
+
+
+                <label class="terms-option">
+                    <input type="checkbox" id="accept-terms" required>
+
+                    <span>
+                        I agree to the EcoVort terms and privacy policy.
+                    </span>
+                </label>
+
+
+                <p
+                    class="form-message"
+                    id="signup-message"
+                    role="status"
+                    aria-live="polite">
+                </p>
+
+
+                <button type="submit" class="auth-submit">
+                    Create Account <span>→</span>
+                </button>
+
+            </form>
+
+
+            <div class="auth-divider">
+                <span>ALREADY A MEMBER?</span>
+            </div>
+
+
+            <p class="auth-switch">
+                Already have an account?
+                <a href="login.html">Sign in</a>
+            </p>
+
+
+            <a href="product.html" class="back-to-shop">
+                ← Continue shopping
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+
+                <a class="brand" href="index.html">
+                    <img class="brand-mark" src="assets/ecovort-logo.svg" alt="">
+                    <span>EcoVort</span>
+                </a>
+
+                <p>Everyday reusables, gathered in one place.</p>
+
+            </div>
+
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="index.html">Home</a>
+                <a href="product.html">Products</a>
+                <a href="about.html">About</a>
+            </nav>
+
+            <p class="copyright">
+                © 2026 EcoVort. Browse at your own pace.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

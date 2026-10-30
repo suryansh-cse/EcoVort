@@ -1,0 +1,303 @@
+
+/* =====================================
+   ECOVORT - AUTHENTICATION
+===================================== */
+
+.auth-main {
+    min-height: 680px;
+    padding: 75px 20px 95px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--paper);
+}
+
+
+/* AUTH CARD */
+
+.auth-card {
+    width: 100%;
+    max-width: 460px;
+    padding: 45px 48px;
+    background: var(--paper-light);
+    border: 1px solid var(--line);
+}
+
+.signup-card {
+    max-width: 480px;
+}
+
+
+/* HEADING */
+
+.auth-heading {
+    margin-bottom: 34px;
+}
+
+.auth-heading .eyebrow {
+    margin-bottom: 13px;
+}
+
+.auth-heading h1 {
+    font-family: var(--serif);
+    font-size: clamp(34px, 5vw, 43px);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 13px;
+}
+
+.auth-heading > p:last-child {
+    max-width: 350px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* FORM FIELDS */
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--ink);
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 9px;
+}
+
+.form-group input {
+    width: 100%;
+    height: 49px;
+    padding: 0 14px;
+    border: 1px solid var(--line);
+    background: var(--paper-light);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input::placeholder {
+    color: #99998e;
+}
+
+.form-group input:focus {
+    border-color: var(--forest);
+}
+
+
+/* LABEL ROW */
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label-row label {
+    margin-bottom: 9px;
+}
+
+.text-button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin-bottom: 9px;
+    color: var(--forest);
+    font-family: var(--sans);
+    font-size: 11px;
+    cursor: pointer;
+}
+
+
+/* FORM OPTIONS */
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 3px 0 22px;
+}
+
+.remember-option,
+.terms-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.remember-option input,
+.terms-option input {
+    accent-color: var(--forest);
+    margin-top: 2px;
+}
+
+.form-options a,
+.terms-option a {
+    color: var(--forest);
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.terms-option {
+    margin: 5px 0 22px;
+}
+
+
+/* SUBMIT BUTTON */
+
+.auth-submit {
+    width: 100%;
+    min-height: 51px;
+    padding: 0 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    background: var(--forest);
+    color: var(--paper-light);
+    font-family: var(--sans);
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.auth-submit:hover {
+    background: var(--ink);
+}
+
+.auth-submit span {
+    font-size: 18px;
+}
+
+
+/* FORM MESSAGES */
+
+.form-message {
+    min-height: 18px;
+    margin-bottom: 10px;
+    color: var(--clay);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.form-message.success {
+    color: var(--forest);
+}
+
+
+/* DIVIDER */
+
+.auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin: 30px 0 21px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+}
+
+.auth-divider span {
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 1.3px;
+    white-space: nowrap;
+}
+
+
+/* ACCOUNT SWITCH */
+
+.auth-switch {
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+}
+
+.auth-switch a {
+    color: var(--forest);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.auth-switch a:hover,
+.form-options a:hover {
+    text-decoration: underline;
+}
+
+
+/* CONTINUE SHOPPING */
+
+.back-to-shop {
+    display: block;
+    width: fit-content;
+    margin: 27px auto 0;
+    color: var(--muted);
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.back-to-shop:hover {
+    color: var(--forest);
+}
+
+
+/* SIGNUP SPACING */
+
+.signup-card .auth-heading {
+    margin-bottom: 27px;
+}
+
+.signup-card .form-group {
+    margin-bottom: 17px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .auth-main {
+        min-height: auto;
+        padding: 45px 18px 65px;
+    }
+
+    .auth-card,
+    .signup-card {
+        padding: 32px 23px;
+    }
+
+    .auth-heading h1 {
+        font-size: 35px;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .auth-card,
+    .signup-card {
+        padding: 28px 18px;
+    }
+
+    .form-options {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}

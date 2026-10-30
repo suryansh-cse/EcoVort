@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | EcoVort</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+
+    <script src="assets/js/auth.js" defer></script>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-content">
+
+            <a class="brand" href="index.html">
+                <img class="brand-mark" src="assets/ecovort-logo.svg" alt="">
+                <span>EcoVort</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="product.html">Products</a>
+                <a href="about.html">About</a>
+            </nav>
+
+            <a class="shop-link" href="product.html">
+                Browse shop <span aria-hidden="true">↗</span>
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- Login -->
+    <main id="main-content" class="auth-main">
+
+        <section class="auth-card">
+
+            <div class="auth-heading">
+
+                <p class="eyebrow">WELCOME BACK</p>
+
+                <h1>Good to see you.</h1>
+
+                <p>
+                    Sign in to continue exploring thoughtful
+                    everyday essentials.
+                </p>
+
+            </div>
+
+
+            <form id="login-form">
+
+                <div class="form-group">
+                    <label for="login-email">Email address</label>
+
+                    <input
+                        type="email"
+                        id="login-email"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+
+                    <div class="label-row">
+                        <label for="login-password">Password</label>
+
+                        <button
+                            type="button"
+                            class="text-button"
+                            data-toggle-password="login-password">
+                            Show
+                        </button>
+                    </div>
+
+                    <input
+                        type="password"
+                        id="login-password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-options">
+
+                    <label class="remember-option">
+                        <input type="checkbox" id="remember-me">
+                        <span>Remember me</span>
+                    </label>
+
+                    <a href="#" id="forgot-password">
+                        Forgot password?
+                    </a>
+
+                </div>
+
+
+                <p
+                    class="form-message"
+                    id="login-message"
+                    role="status"
+                    aria-live="polite">
+                </p>
+
+
+                <button type="submit" class="auth-submit">
+                    Sign In <span>→</span>
+                </button>
+
+            </form>
+
+
+            <div class="auth-divider">
+                <span>NEW TO ECOVORT?</span>
+            </div>
+
+
+            <p class="auth-switch">
+                Don't have an account?
+                <a href="signup.html">Create one</a>
+            </p>
+
+
+            <a href="product.html" class="back-to-shop">
+                ← Continue shopping
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+
+                <a class="brand" href="index.html">
+                    <img class="brand-mark" src="assets/ecovort-logo.svg" alt="">
+                    <span>EcoVort</span>
+                </a>
+
+                <p>Everyday reusables, gathered in one place.</p>
+
+            </div>
+
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="index.html">Home</a>
+                <a href="product.html">Products</a>
+                <a href="about.html">About</a>
+            </nav>
+
+            <p class="copyright">
+                © 2026 EcoVort. Browse at your own pace.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
+
