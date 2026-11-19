@@ -12,13 +12,13 @@
     background: var(--paper);
 }
 
-
 /* AUTH CARD */
 
 .auth-card {
     width: 100%;
     max-width: 460px;
     padding: 45px 48px;
+    box-sizing: border-box;
     background: var(--paper-light);
     border: 1px solid var(--line);
 }
@@ -26,7 +26,6 @@
 .signup-card {
     max-width: 480px;
 }
-
 
 /* HEADING */
 
@@ -54,7 +53,6 @@
     line-height: 1.8;
 }
 
-
 /* FORM FIELDS */
 
 .form-group {
@@ -69,9 +67,11 @@
     margin-bottom: 9px;
 }
 
-.form-group input {
+.form-group input:not([type="checkbox"]):not([type="radio"]) {
+    display: block;
     width: 100%;
     height: 49px;
+    box-sizing: border-box;
     padding: 0 14px;
     border: 1px solid var(--line);
     background: var(--paper-light);
@@ -90,6 +90,44 @@
     border-color: var(--forest);
 }
 
+/* PASSWORD FIELD */
+
+.password-field {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.password-field input {
+    width: 100%;
+    height: 49px;
+    box-sizing: border-box;
+    padding: 0 65px 0 14px;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: auto;
+    min-width: 0;
+    height: auto;
+    padding: 4px 5px;
+    margin: 0;
+    border: none;
+    background: transparent;
+    color: var(--forest);
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.password-toggle:hover {
+    color: var(--clay);
+}
 
 /* LABEL ROW */
 
@@ -114,7 +152,6 @@
     cursor: pointer;
 }
 
-
 /* FORM OPTIONS */
 
 .form-options {
@@ -136,10 +173,21 @@
     line-height: 1.6;
 }
 
-.remember-option input,
-.terms-option input {
+/* CHECKBOXES */
+
+.remember-option input[type="checkbox"],
+.terms-option input[type="checkbox"],
+.privacy-policy input[type="checkbox"] {
+    display: inline-block;
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+    min-height: 16px;
+    padding: 0;
+    margin: 2px 0 0;
+    flex: 0 0 16px;
     accent-color: var(--forest);
-    margin-top: 2px;
+    cursor: pointer;
 }
 
 .form-options a,
@@ -153,6 +201,27 @@
     margin: 5px 0 22px;
 }
 
+/* PRIVACY POLICY */
+
+.privacy-policy {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    width: 100%;
+    margin: 12px 0 22px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.privacy-policy label {
+    display: inline;
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.6;
+    cursor: pointer;
+}
 
 /* SUBMIT BUTTON */
 
@@ -180,7 +249,6 @@
     font-size: 18px;
 }
 
-
 /* FORM MESSAGES */
 
 .form-message {
@@ -194,7 +262,6 @@
 .form-message.success {
     color: var(--forest);
 }
-
 
 /* DIVIDER */
 
@@ -220,7 +287,6 @@
     white-space: nowrap;
 }
 
-
 /* ACCOUNT SWITCH */
 
 .auth-switch {
@@ -240,7 +306,6 @@
     text-decoration: underline;
 }
 
-
 /* CONTINUE SHOPPING */
 
 .back-to-shop {
@@ -256,7 +321,6 @@
     color: var(--forest);
 }
 
-
 /* SIGNUP SPACING */
 
 .signup-card .auth-heading {
@@ -267,11 +331,9 @@
     margin-bottom: 17px;
 }
 
-
-/* RESPONSIVE */
+/* AUTH RESPONSIVE */
 
 @media (max-width: 600px) {
-
     .auth-main {
         min-height: auto;
         padding: 45px 18px 65px;
@@ -285,11 +347,9 @@
     .auth-heading h1 {
         font-size: 35px;
     }
-
 }
 
 @media (max-width: 380px) {
-
     .auth-card,
     .signup-card {
         padding: 28px 18px;
@@ -299,8 +359,11 @@
         align-items: flex-start;
         flex-direction: column;
     }
-
 }
+
+/* =====================================
+   ECOVORT - PROFILE
+===================================== */
 
 .profile-page {
     min-height: 65vh;
@@ -498,6 +561,8 @@
     margin-top: 22px;
 }
 
+/* PROFILE RESPONSIVE */
+
 @media (max-width: 760px) {
     .profile-page {
         padding: 44px 0 60px;
@@ -535,4 +600,28 @@
         align-items: flex-start;
         flex-direction: column;
     }
+}
+
+/* Fix password label and input alignment */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.form-group > label {
+    display: block;
+    width: 100%;
+}
+
+.password-field {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.password-field input {
+    display: block;
+    width: 100%;
 }

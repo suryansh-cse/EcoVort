@@ -170,7 +170,7 @@ if (signupForm) {
         users.push(newUser);
 
         saveUsers(users);
-        createSession(newUser);
+        createSession(newUser, true);
 
         showMessage(
             message,
