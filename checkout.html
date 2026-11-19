@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Address | EcoVort</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+
+    <script src="assets/js/auth.js" defer></script>
+    <script src="assets/js/cart.js" defer></script>
+    <script src="assets/js/checkout.js" defer></script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-content">
+
+            <a class="brand" href="index.html" aria-label="EcoVort home">
+                <img class="brand-mark" src="assets/ecovort-logo.svg" alt="">
+                <span>EcoVort</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="product.html">Products</a>
+                <a href="about.html">About</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="profile.html" data-account-link>
+                    <span data-account-label>Sign in</span>
+                </a>
+
+                <a class="shop-link" href="cart.html">
+                    Cart (<span data-cart-count>0</span>)
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- CHECKOUT -->
+    <main class="checkout-page">
+
+        <div class="container checkout-container">
+
+            <div class="checkout-heading">
+                <p class="checkout-eyebrow">YOUR ECOVORT ORDER</p>
+                <h1>Where should we deliver?</h1>
+                <p>
+                    Just a few details before your thoughtful choices
+                    make their way to you.
+                </p>
+            </div>
+
+
+            <!-- CHECKOUT PROGRESS -->
+            <div class="checkout-progress">
+                <div class="progress-step active">
+                    <span class="progress-number">01</span>
+                    <span>Address</span>
+                </div>
+
+                <span class="progress-line"></span>
+
+                <div class="progress-step">
+                    <span class="progress-number">02</span>
+                    <span>Payment</span>
+                </div>
+
+                <span class="progress-line"></span>
+
+                <div class="progress-step">
+                    <span class="progress-number">03</span>
+                    <span>Confirmation</span>
+                </div>
+            </div>
+
+
+            <div class="checkout-grid">
+
+                <!-- ADDRESS FORM -->
+                <section class="checkout-card address-card">
+
+                    <div class="checkout-card-heading">
+                        <div>
+                            <p class="checkout-eyebrow">DELIVERY DETAILS</p>
+                            <h2>Delivery address</h2>
+                        </div>
+                        <span class="address-icon" aria-hidden="true">⌂</span>
+                    </div>
+
+                    <form id="checkout-address-form">
+
+                        <div class="checkout-form-grid">
+
+                            <div class="checkout-field full-width">
+                                <label for="delivery-name">Full name</label>
+                                <input
+                                    type="text"
+                                    id="delivery-name"
+                                    name="name"
+                                    placeholder="Enter your full name"
+                                    autocomplete="name"
+                                    required
+                                >
+                            </div>
+
+
+                            <div class="checkout-field">
+                                <label for="delivery-phone">Mobile number</label>
+                                <input
+                                    type="tel"
+                                    id="delivery-phone"
+                                    name="phone"
+                                    placeholder="10-digit mobile number"
+                                    inputmode="numeric"
+                                    pattern="[6-9][0-9]{9}"
+                                    maxlength="10"
+                                    autocomplete="tel"
+                                    required
+                                >
+                            </div>
+
+
+                            <div class="checkout-field">
+                                <label for="delivery-pincode">PIN code</label>
+                                <input
+                                    type="text"
+                                    id="delivery-pincode"
+                                    name="pincode"
+                                    placeholder="6-digit PIN code"
+                                    inputmode="numeric"
+                                    pattern="[0-9]{6}"
+                                    maxlength="6"
+                                    autocomplete="postal-code"
+                                    required
+                                >
+                            </div>
+
+
+                            <div class="checkout-field full-width">
+                                <label for="delivery-house">House / Building / Apartment</label>
+                                <input
+                                    type="text"
+                                    id="delivery-house"
+                                    name="house"
+                                    placeholder="House number, building name"
+                                    autocomplete="address-line1"
+                                    required
+                                >
+                            </div>
+
+
+                            <div class="checkout-field full-width">
+                                <label for="delivery-street">Street / Area</label>
+                                <input
+                                    type="text"
+                                    id="delivery-street"
+                                    name="street"
+                                    placeholder="Street, locality or area"
+                                    autocomplete="address-line2"
+                                    required
+                                >
+                            </div>
+
+
+                            <div class="checkout-field full-width">
+                                <label for="delivery-landmark">
+                                    Landmark <span>(Optional)</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="delivery-landmark"
+                                    name="landmark"
+                                    placeholder="Near a school, shop or other landmark"
+                                >
+                            </div>
+
+
+                            <div class="checkout-field">
+                                <label for="delivery-city">City</label>
+                                <input
+                                    type="text"
+                                    id="delivery-city"
+                                    name="city"
+                                    placeholder="Your city"
+                                    autocomplete="address-level2"
+                                    required
+                                >
+                            </div>
+
+
+                            <div class="checkout-field">
+                                <label for="delivery-state">State</label>
+                                <input
+                                    type="text"
+                                    id="delivery-state"
+                                    name="state"
+                                    placeholder="Your state"
+                                    autocomplete="address-level1"
+                                    required
+                                >
+                            </div>
+
+
+                            <div class="checkout-field full-width">
+                                <label for="delivery-instructions">
+                                    Delivery instructions <span>(Optional)</span>
+                                </label>
+                                <textarea
+                                    id="delivery-instructions"
+                                    name="instructions"
+                                    rows="3"
+                                    placeholder="Anything the delivery person should know?"
+                                ></textarea>
+                            </div>
+
+                        </div>
+
+
+                        <p class="checkout-message" id="checkout-message" role="status"></p>
+
+
+                        <div class="address-form-footer">
+                            <p>Your address is saved in this browser.</p>
+
+                            <a href="payment.html"><button 
+                                class="button button-primary"
+                                type="submit"
+                                id="continue-payment"
+                            >
+                                Continue to payment
+                                <span aria-hidden="true">→</span>
+                            </button></a>
+                        </div>
+
+                    </form>
+
+                </section>
+
+
+                <!-- ORDER SUMMARY -->
+                <aside class="checkout-card order-summary">
+
+                    <p class="checkout-eyebrow">YOUR SELECTION</p>
+                    <h2>Order summary</h2>
+
+                    <div id="checkout-items" class="checkout-items">
+                        <!-- Cart items are added by JavaScript -->
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <strong id="checkout-subtotal">₹0.00</strong>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Delivery</span>
+                        <span class="summary-pending">To be confirmed</span>
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-row summary-total">
+                        <span>Order subtotal</span>
+                        <strong id="checkout-total">₹0.00</strong>
+                    </div>
+
+                    <p class="summary-note">
+                        Delivery charges, if applicable, will be shown
+                        before the final order confirmation.
+                    </p>
+
+                    <a href="cart.html" class="back-to-cart">
+                        ← Return to cart
+                    </a>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+
+            <div>
+                <a class="brand" href="index.html">
+                    <img class="brand-mark" src="assets/ecovort-logo.svg" alt="">
+                    <span>EcoVort</span>
+                </a>
+                <p>Everyday reusables, gathered in one place.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="product.html">Products</a>
+                <a href="about.html">About</a>
+            </div>
+
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© 2026 EcoVort. Thoughtful choices, everyday.</p>
+        </div>
+    </footer>
+        <script src="js/auth.js" defer></script>
+<script src="js/cart.js" defer></script>
+<script src="js/checkout.js" defer></script>
+</body>
+</html>

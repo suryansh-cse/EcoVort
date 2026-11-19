@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment | EcoVort</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/payment.css">
+
+    <script src="js/auth.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/payment.js" defer></script>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container header-content">
+        <a href="index.html" class="brand">
+            <img src="assets/ecovort-logo.svg" class="brand-mark" alt="">
+            <span>EcoVort</span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="about.html">About</a>
+        </nav>
+
+        <div class="header-actions">
+            <a href="cart.html" class="shop-link">
+                Cart
+            </a>
+        </div>
+    </div>
+</header>
+
+<main class="payment-page">
+    <div class="container">
+
+        <div class="payment-heading">
+            <p class="eyebrow">ALMOST THERE</p>
+            <h1>Choose how to pay.</h1>
+            <p>Select a payment method for your EcoVort order.</p>
+        </div>
+
+        <div class="checkout-progress">
+            <span class="completed">01 Address</span>
+            <span class="active">02 Payment</span>
+            <span>03 Confirmation</span>
+        </div>
+
+        <div class="payment-layout">
+
+            <!-- PAYMENT METHODS -->
+
+            <section class="payment-section">
+
+                <h2>Payment method</h2>
+
+                <form id="payment-form">
+
+                    <div class="payment-options">
+
+                        <label class="payment-option">
+                            <input type="radio" name="payment-method"
+                                value="upi" required>
+
+                            <span class="payment-icon">↗</span>
+
+                            <span class="payment-details">
+                                <strong>UPI</strong>
+                                <small>Google Pay, PhonePe, Paytm and more</small>
+                            </span>
+                        </label>
+
+                        <label class="payment-option">
+                            <input type="radio" name="payment-method"
+                                value="card">
+
+                            <span class="payment-icon">▤</span>
+
+                            <span class="payment-details">
+                                <strong>Credit / Debit Card</strong>
+                                <small>Visa, Mastercard, RuPay and more</small>
+                            </span>
+                        </label>
+
+                        <label class="payment-option">
+                            <input type="radio" name="payment-method"
+                                value="netbanking">
+
+                            <span class="payment-icon">⌂</span>
+
+                            <span class="payment-details">
+                                <strong>Net Banking</strong>
+                                <small>Pay through your bank</small>
+                            </span>
+                        </label>
+
+                        <label class="payment-option">
+                            <input type="radio" name="payment-method"
+                                value="cod">
+
+                            <span class="payment-icon">₹</span>
+
+                            <span class="payment-details">
+                                <strong>Cash on Delivery</strong>
+                                <small>Pay when your order arrives</small>
+                            </span>
+                        </label>
+
+                    </div>
+
+                    <div id="payment-message" class="payment-message"
+                        role="status"></div>
+
+                        <button type="submit" class="payment-button"
+                        id="save-payment-button">
+                       <a href="order-confirmation.html"> Save payment method</a><span>→</span>
+                    </button>
+
+                    <a href="checkout.html" class="back-link">
+                        ← Back to delivery address
+                    </a>
+
+                </form>
+            </section>
+
+            <!-- ORDER SUMMARY -->
+
+            <aside class="payment-summary">
+
+                <h2>Your order</h2>
+
+                <div id="payment-items">
+                    <p>Loading your items...</p>
+                </div>
+
+                <div class="summary-divider"></div>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <strong id="payment-subtotal">₹0</strong>
+                </div>
+
+                <div class="summary-row total-row">
+                    <span>Order total</span>
+                    <strong id="payment-total">₹0</strong>
+                </div>
+
+                <p class="secure-note">
+                    Your payment selection is saved locally in this
+                    demonstration. Online payment processing is not
+                    connected yet.
+                </p>
+
+            </aside>
+
+        </div>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 EcoVort. Browse at your own pace.</p>
+    </div>
+</footer>
+<script src="js/auth.js" defer></script>
+<script src="js/cart.js" defer></script>
+<script src="js/checkout.js" defer></script>
+<script src="js/payment.js" defer></script>
+</body>
+</html>

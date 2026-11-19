@@ -1,28 +1,42 @@
+
 // ======================================
-// ECOVORT - AUTHENTICATION PROTOTYPE
+// ECOVORT - AUTHENTICATION SYSTEM
+// Frontend demonstration only
 // ======================================
 
 const USERS_KEY = "ecovort-demo-users";
 const SESSION_KEY = "ecovort-user-session";
 
-// Get registered demo users
+// ======================================
+// STORAGE FUNCTIONS
+// ======================================
+
 function getUsers() {
     try {
-        return JSON.parse(localStorage.getItem(USERS_KEY)) || [];
+        const users = JSON.parse(
+            localStorage.getItem(USERS_KEY)
+        );
+
+        return Array.isArray(users) ? users : [];
     } catch (error) {
-        console.error("Could not read demo users:", error);
+        console.error("Could not load users:", error);
         return [];
     }
 }
 
-// Save registered demo users
 function saveUsers(users) {
-    localStorage.setItem(USERS_KEY, JSON.stringify(users));
+    localStorage.setItem(
+        USERS_KEY,
+        JSON.stringify(users)
+    );
 }
 
-// Create a session for the selected user
+// ======================================
+// SESSION MANAGEMENT
+// ======================================
+
 function createSession(user, rememberMe = false) {
-    const userSession = {
+    const session = {
         id: user.id,
         name: user.name,
         email: user.email,
@@ -32,11 +46,16 @@ function createSession(user, rememberMe = false) {
     localStorage.removeItem(SESSION_KEY);
     sessionStorage.removeItem(SESSION_KEY);
 
-    const storage = rememberMe ? localStorage : sessionStorage;
-    storage.setItem(SESSION_KEY, JSON.stringify(userSession));
+    const storage = rememberMe
+        ? localStorage
+        : sessionStorage;
+
+    storage.setItem(
+        SESSION_KEY,
+        JSON.stringify(session)
+    );
 }
 
-// Read the currently signed-in user
 function getCurrentUser() {
     const session =
         localStorage.getItem(SESSION_KEY) ||
@@ -47,24 +66,29 @@ function getCurrentUser() {
     try {
         return JSON.parse(session);
     } catch (error) {
+        console.error("Invalid session:", error);
         return null;
     }
 }
 
-// Update the session after profile edits
 function updateCurrentSession(user) {
-    const rememberMe = localStorage.getItem(SESSION_KEY) !== null;
+    const rememberMe =
+        localStorage.getItem(SESSION_KEY) !== null;
+
     createSession(user, rememberMe);
 }
 
-// Log out without deleting the saved profile
 function logoutUser() {
     localStorage.removeItem(SESSION_KEY);
     sessionStorage.removeItem(SESSION_KEY);
+
     window.location.href = "login.html";
 }
 
-// Display a form message
+// ======================================
+// MESSAGE HANDLING
+// ======================================
+
 function showMessage(element, message, success = false) {
     if (!element) return;
 
@@ -82,12 +106,34 @@ if (signupForm) {
     signupForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        const name = document.getElementById("signup-name").value.trim();
-        const email = document.getElementById("signup-email")
-            .value.trim().toLowerCase();
-        const password = document.getElementById("signup-password").value;
-        const confirmPassword = document.getElementById("confirm-password").value;
+        const name = document
+            .getElementById("signup-name")
+            .value.trim();
+
+        const email = document
+            .getElementById("signup-email")
+            .value.trim()
+            .toLowerCase();
+
+        const password = document
+            .getElementById("signup-password")
+            .value;
+
+        const confirmPassword = document
+            .getElementById("confirm-password")
+            .value;
+
         const message = document.getElementById("signup-message");
+
+        if (!name || !email || !password || !confirmPassword) {
+            showMessage(message, "Please complete all fields.");
+            return;
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            showMessage(message, "Please enter a valid email address.");
+            return;
+        }
 
         if (password.length < 8) {
             showMessage(message, "Password must contain at least 8 characters.");
@@ -95,30 +141,42 @@ if (signupForm) {
         }
 
         if (password !== confirmPassword) {
-            showMessage(message, "Your passwords do not match.");
+            showMessage(message, "Passwords do not match.");
             return;
         }
 
         const users = getUsers();
-        const existingUser = users.find(user => user.email === email);
+
+        const existingUser = users.find(
+            user => user.email === email
+        );
 
         if (existingUser) {
-            showMessage(message, "An account with this email already exists.");
+            showMessage(message, "This email is already registered.");
             return;
         }
 
         const newUser = {
             id: Date.now().toString(),
-            name,
-            email,
-            avatar: ""
+            name: name,
+            email: email,
+            password: password,
+            avatar: "",
+            phone: "",
+            addresses: [],
+            createdAt: new Date().toISOString()
         };
 
         users.push(newUser);
+
         saveUsers(users);
         createSession(newUser);
 
-        showMessage(message, "Account created! Redirecting...", true);
+        showMessage(
+            message,
+            "Account created successfully! Redirecting...",
+            true
+        );
 
         setTimeout(() => {
             window.location.href = "profile.html";
@@ -136,28 +194,46 @@ if (loginForm) {
     loginForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        const email = document.getElementById("login-email")
-            .value.trim().toLowerCase();
-        const password = document.getElementById("login-password").value;
-        const rememberMe = document.getElementById("remember-me").checked;
+        const email = document
+            .getElementById("login-email")
+            .value.trim()
+            .toLowerCase();
+
+        const password = document
+            .getElementById("login-password")
+            .value;
+
+        const rememberMe = document
+            .getElementById("remember-me")?.checked || false;
+
         const message = document.getElementById("login-message");
 
-        if (!password.trim()) {
-            showMessage(message, "Please enter your password.");
+        if (!email || !password) {
+            showMessage(message, "Please enter your email and password.");
             return;
         }
 
-        const user = getUsers().find(account => account.email === email);
+        const user = getUsers().find(
+            account => account.email === email
+        );
 
         if (!user) {
-            showMessage(message, "No demo account found. Please sign up first.");
+            showMessage(message, "No account found. Please sign up first.");
             return;
         }
 
-        // Prototype only: this does not verify the password.
+        if (user.password !== password) {
+            showMessage(message, "Incorrect password.");
+            return;
+        }
+
         createSession(user, rememberMe);
 
-        showMessage(message, "Welcome back! Redirecting...", true);
+        showMessage(
+            message,
+            "Login successful! Redirecting...",
+            true
+        );
 
         setTimeout(() => {
             window.location.href = "profile.html";
@@ -166,22 +242,56 @@ if (loginForm) {
 }
 
 // ======================================
+// UPDATE USER PROFILE
+// ======================================
+
+function updateUserProfile(updatedData) {
+    const currentUser = getCurrentUser();
+
+    if (!currentUser) return false;
+
+    const users = getUsers();
+
+    const userIndex = users.findIndex(
+        user => user.id === currentUser.id
+    );
+
+    if (userIndex === -1) return false;
+
+    users[userIndex] = {
+        ...users[userIndex],
+        ...updatedData,
+        id: users[userIndex].id,
+        email: users[userIndex].email
+    };
+
+    saveUsers(users);
+    updateCurrentSession(users[userIndex]);
+
+    return true;
+}
+
+// ======================================
 // SHOW / HIDE PASSWORD
 // ======================================
 
 document.querySelectorAll("[data-toggle-password]").forEach(button => {
     button.addEventListener("click", function () {
-        const input = document.getElementById(button.dataset.togglePassword);
+        const input = document.getElementById(
+            button.dataset.togglePassword
+        );
+
         if (!input) return;
 
-        const showPassword = input.type === "password";
-        input.type = showPassword ? "text" : "password";
-        button.textContent = showPassword ? "Hide" : "Show";
+        const visible = input.type === "password";
+
+        input.type = visible ? "text" : "password";
+        button.textContent = visible ? "Hide" : "Show";
     });
 });
 
 // ======================================
-// FORGOT PASSWORD PROTOTYPE MESSAGE
+// FORGOT PASSWORD
 // ======================================
 
 const forgotPassword = document.getElementById("forgot-password");
@@ -192,7 +302,35 @@ if (forgotPassword) {
 
         showMessage(
             document.getElementById("login-message"),
-            "Password recovery will be available after backend integration."
+            "Password recovery requires backend integration."
         );
     });
 }
+
+// ======================================
+// DYNAMIC ACCOUNT NAVIGATION
+// ======================================
+
+document.querySelectorAll("[data-account-link]").forEach(link => {
+    const user = getCurrentUser();
+
+    if (user) {
+        link.href = "profile.html";
+
+        const label = link.querySelector("[data-account-label]");
+
+        if (label) {
+            label.textContent = "My account";
+        }
+    } else {
+        link.href = "login.html";
+
+        const label = link.querySelector("[data-account-label]");
+
+        if (label) {
+            label.textContent = "Sign in";
+        }
+    }
+});
+
+console.log("EcoVort authentication system loaded.");

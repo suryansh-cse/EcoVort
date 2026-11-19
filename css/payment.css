@@ -1,0 +1,259 @@
+
+/* =================================
+   ECOVORT - PAYMENT PAGE
+================================= */
+
+.payment-page {
+    padding: 65px 0 90px;
+    background: var(--paper);
+    min-height: 75vh;
+}
+
+.payment-heading {
+    margin-bottom: 35px;
+}
+
+.eyebrow {
+    color: var(--moss);
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.payment-heading h1 {
+    font-family: var(--serif);
+    font-size: clamp(34px, 5vw, 52px);
+    font-weight: 400;
+    margin: 12px 0;
+    color: var(--ink);
+}
+
+.payment-heading > p:last-child {
+    color: var(--muted);
+}
+
+.checkout-progress {
+    display: flex;
+    gap: 35px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.checkout-progress .completed,
+.checkout-progress .active {
+    color: var(--forest);
+    font-weight: 600;
+}
+
+.payment-layout {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 35px;
+    align-items: start;
+}
+
+.payment-section,
+.payment-summary {
+    background: var(--paper-light);
+    border: 1px solid var(--line);
+    padding: 30px;
+}
+
+.payment-section h2,
+.payment-summary h2 {
+    font-family: var(--serif);
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0 0 25px;
+}
+
+.payment-options {
+    display: grid;
+    gap: 12px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid var(--line);
+    padding: 19px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.payment-option:hover {
+    border-color: var(--moss);
+}
+
+.payment-option:has(input:checked) {
+    border-color: var(--forest);
+    background: var(--paper-green);
+}
+
+.payment-option input {
+    accent-color: var(--forest);
+    width: 17px;
+    height: 17px;
+}
+
+.payment-icon {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    background: var(--paper-green);
+    color: var(--forest);
+    font-size: 22px;
+}
+
+.payment-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.payment-details strong {
+    color: var(--ink);
+    font-size: 15px;
+}
+
+.payment-details small {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.payment-button {
+    width: 100%;
+    padding: 17px 20px;
+    margin-top: 25px;
+    border: none;
+    background: var(--forest);
+    color: white;
+    font: inherit;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payment-button:hover {
+    background: var(--ink);
+}
+
+.payment-message {
+    margin-top: 15px;
+    font-size: 14px;
+    color: var(--clay);
+}
+
+.payment-message.success {
+    color: var(--forest);
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 22px;
+    font-size: 13px;
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: var(--forest);
+}
+
+/* ORDER SUMMARY */
+
+.payment-summary {
+    position: sticky;
+    top: 25px;
+}
+
+.payment-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 13px;
+}
+
+.payment-item-name {
+    color: var(--ink);
+}
+
+.payment-item-price {
+    color: var(--muted);
+    white-space: nowrap;
+}
+
+.summary-divider {
+    height: 1px;
+    background: var(--line);
+    margin: 20px 0;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.summary-row strong {
+    color: var(--ink);
+}
+
+.total-row {
+    font-size: 18px;
+    padding-top: 15px;
+    border-top: 1px solid var(--line);
+}
+
+.total-row strong {
+    color: var(--forest);
+}
+
+.secure-note {
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--muted);
+    margin-top: 25px;
+}
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+    .payment-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-summary {
+        position: static;
+    }
+
+    .payment-section,
+    .payment-summary {
+        padding: 22px;
+    }
+
+    .checkout-progress {
+        gap: 15px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .payment-option {
+        padding: 14px;
+    }
+
+    .payment-heading h1 {
+        font-size: 35px;
+    }
+}

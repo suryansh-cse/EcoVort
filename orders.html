@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders | EcoVort</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/orders.css">
+
+    <script src="js/auth.js" defer></script>
+    <script src="js/orders.js" defer></script>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container header-content">
+        <a href="index.html" class="brand">
+            <img src="assets/ecovort-logo.svg" class="brand-mark" alt="">
+            <span>EcoVort</span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="about.html">About</a>
+        </nav>
+
+        <div class="header-actions">
+            <a href="profile.html" class="shop-link">My account</a>
+        </div>
+    </div>
+</header>
+
+<main class="order-page">
+    <div class="container">
+
+        <div class="orders-heading">
+            <p class="eyebrow">YOUR ECOVORT ACCOUNT</p>
+            <h1>My orders.</h1>
+            <p>Every purchase, kept in one place.</p>
+        </div>
+
+        <div class="orders-toolbar">
+            <span id="orders-count">Your order history</span>
+
+            <a href="product.html" class="order-secondary-button">
+                Continue shopping
+            </a>
+        </div>
+
+        <div id="orders-list" class="orders-list">
+            <p>Loading your orders...</p>
+        </div>
+
+        <div id="orders-empty" class="orders-empty" hidden>
+            <h2>No orders yet.</h2>
+            <p>Your future EcoVort purchases will appear here.</p>
+            <a href="product.html" class="order-primary-button">
+                Explore products →
+            </a>
+        </div>
+
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 EcoVort. Browse at your own pace.</p>
+    </div>
+</footer>
+
+</body>
+</html>

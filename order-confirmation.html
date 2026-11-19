@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed | EcoVort</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/orders.css">
+
+    <script src="js/auth.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/order-confirmation.js" defer></script>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container header-content">
+        <a href="index.html" class="brand">
+            <img src="assets/ecovort-logo.svg" class="brand-mark" alt="">
+            <span>EcoVort</span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="about.html">About</a>
+        </nav>
+
+        <div class="header-actions">
+            <a href="orders.html" class="shop-link">My orders</a>
+        </div>
+    </div>
+</header>
+
+<main class="order-page">
+    <div class="container">
+
+        <section class="confirmation-card">
+
+            <div class="confirmation-symbol">✓</div>
+
+            <p class="eyebrow">THANK YOU FOR CHOOSING ECOVORT</p>
+
+            <h1 id="confirmation-title">Your order is confirmed.</h1>
+
+            <p class="confirmation-description" id="confirmation-description">
+                Your order details are being prepared.
+            </p>
+
+            <div class="order-number">
+                <span>ORDER NUMBER</span>
+                <strong id="order-number">Loading...</strong>
+            </div>
+
+            <div class="confirmation-details">
+
+                <div>
+                    <h3>Items ordered</h3>
+                    <div id="confirmed-items"></div>
+                </div>
+
+                <div>
+                    <h3>Delivery address</h3>
+                    <p id="confirmed-address"></p>
+                </div>
+
+                <div>
+                    <h3>Payment method</h3>
+                    <p id="confirmed-payment"></p>
+                </div>
+
+                <div class="confirmed-total">
+                    <span>Order total</span>
+                    <strong id="confirmed-total">₹0</strong>
+                </div>
+
+            </div>
+
+            <div class="confirmation-actions">
+                <a href="orders.html" class="order-primary-button">
+                    View my orders →
+                </a>
+
+                <a href="product.html" class="order-secondary-button">
+                    Continue shopping
+                </a>
+            </div>
+
+        </section>
+
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 EcoVort. Browse at your own pace.</p>
+    </div>
+</footer>
+<script src="js/auth.js" defer></script>
+<script src="js/cart.js" defer></script>
+<script src="js/order-confirmation.js" defer></script>
+</body>
+</html>
